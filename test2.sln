@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32728.150
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test2", "test2\test2.csproj", "{C485D74E-3273-4388-ABE6-77C42A700796}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "AgromonSetup", "AgromonSetup\AgromonSetup.vdproj", "{1E0B7121-1B4F-4F5A-8D5A-34C8FB3A6B58}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C485D74E-3273-4388-ABE6-77C42A700796}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C485D74E-3273-4388-ABE6-77C42A700796}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C485D74E-3273-4388-ABE6-77C42A700796}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C485D74E-3273-4388-ABE6-77C42A700796}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E0B7121-1B4F-4F5A-8D5A-34C8FB3A6B58}.Debug|Any CPU.ActiveCfg = Debug
+		{1E0B7121-1B4F-4F5A-8D5A-34C8FB3A6B58}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {20D2C484-1EC7-4230-A1AC-B02589911746}
+	EndGlobalSection
+EndGlobal

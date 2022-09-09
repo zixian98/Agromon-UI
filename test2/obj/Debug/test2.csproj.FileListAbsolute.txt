@@ -1,0 +1,105 @@
+C:\Users\pokem\source\repos\test2\test2\bin\Debug\test2.exe.config
+C:\Users\pokem\source\repos\test2\test2\bin\Debug\test2.exe
+C:\Users\pokem\source\repos\test2\test2\bin\Debug\test2.pdb
+C:\Users\pokem\source\repos\test2\test2\obj\Debug\test2.csproj.AssemblyReference.cache
+C:\Users\pokem\source\repos\test2\test2\obj\Debug\test2.csproj.SuggestedBindingRedirects.cache
+C:\Users\pokem\source\repos\test2\test2\obj\Debug\test2.Form1.resources
+C:\Users\pokem\source\repos\test2\test2\obj\Debug\test2.Properties.Resources.resources
+C:\Users\pokem\source\repos\test2\test2\obj\Debug\test2.csproj.GenerateResource.cache
+C:\Users\pokem\source\repos\test2\test2\obj\Debug\test2.csproj.CoreCompileInputs.cache
+C:\Users\pokem\source\repos\test2\test2\obj\Debug\test2.exe
+C:\Users\pokem\source\repos\test2\test2\obj\Debug\test2.pdb
+C:\Users\pokem\source\repos\test2\test2\obj\Debug\test2.Form2.resources
+C:\Users\pokem\OneDrive\Documents\GitHub\Argomon2022Tool\test2\obj\Debug\test2.csproj.AssemblyReference.cache
+C:\Users\pokem\OneDrive\Documents\GitHub\Argomon2022Tool\test2\obj\Debug\test2.csproj.SuggestedBindingRedirects.cache
+C:\Users\pokem\OneDrive\Documents\GitHub\Argomon2022Tool\test2\obj\Debug\test2.Form1.resources
+C:\Users\pokem\OneDrive\Documents\GitHub\Argomon2022Tool\test2\obj\Debug\test2.Form2.resources
+C:\Users\pokem\OneDrive\Documents\GitHub\Argomon2022Tool\test2\obj\Debug\test2.Properties.Resources.resources
+C:\Users\pokem\OneDrive\Documents\GitHub\Argomon2022Tool\test2\obj\Debug\test2.csproj.GenerateResource.cache
+C:\Users\pokem\OneDrive\Documents\GitHub\Argomon2022Tool\test2\obj\Debug\test2.csproj.CoreCompileInputs.cache
+D:\Documents\Intern Project\ArgromonConfigTool2022\test2\bin\Debug\test2.exe.config
+D:\Documents\Intern Project\ArgromonConfigTool2022\test2\bin\Debug\test2.exe
+D:\Documents\Intern Project\ArgromonConfigTool2022\test2\bin\Debug\test2.pdb
+D:\Documents\Intern Project\ArgromonConfigTool2022\test2\obj\Debug\test2.csproj.AssemblyReference.cache
+D:\Documents\Intern Project\ArgromonConfigTool2022\test2\obj\Debug\test2.csproj.SuggestedBindingRedirects.cache
+D:\Documents\Intern Project\ArgromonConfigTool2022\test2\obj\Debug\test2.Form1.resources
+D:\Documents\Intern Project\ArgromonConfigTool2022\test2\obj\Debug\test2.Form2.resources
+D:\Documents\Intern Project\ArgromonConfigTool2022\test2\obj\Debug\test2.Properties.Resources.resources
+D:\Documents\Intern Project\ArgromonConfigTool2022\test2\obj\Debug\test2.csproj.GenerateResource.cache
+D:\Documents\Intern Project\ArgromonConfigTool2022\test2\obj\Debug\test2.csproj.CoreCompileInputs.cache
+D:\Documents\Intern Project\ArgromonConfigTool2022\test2\obj\Debug\test2.exe
+D:\Documents\Intern Project\ArgromonConfigTool2022\test2\obj\Debug\test2.pdb
+C:\Users\pokem\OneDrive\Documents\GitHub\Argomon2022Tool\test2\obj\Debug\test2.Form3.resources
+D:\Documents\Intern Project\Argromon2022Tool\test2\bin\Debug\test2.exe.config
+D:\Documents\Intern Project\Argromon2022Tool\test2\bin\Debug\test2.exe
+D:\Documents\Intern Project\Argromon2022Tool\test2\bin\Debug\test2.pdb
+D:\Documents\Intern Project\Argromon2022Tool\test2\obj\Debug\test2.csproj.AssemblyReference.cache
+D:\Documents\Intern Project\Argromon2022Tool\test2\obj\Debug\test2.csproj.SuggestedBindingRedirects.cache
+D:\Documents\Intern Project\Argromon2022Tool\test2\obj\Debug\test2.Form1.resources
+D:\Documents\Intern Project\Argromon2022Tool\test2\obj\Debug\test2.Form2.resources
+D:\Documents\Intern Project\Argromon2022Tool\test2\obj\Debug\test2.Form3.resources
+D:\Documents\Intern Project\Argromon2022Tool\test2\obj\Debug\test2.Properties.Resources.resources
+D:\Documents\Intern Project\Argromon2022Tool\test2\obj\Debug\test2.csproj.GenerateResource.cache
+D:\Documents\Intern Project\Argromon2022Tool\test2\obj\Debug\test2.csproj.CoreCompileInputs.cache
+D:\Documents\Intern Project\Argromon2022Tool\test2\obj\Debug\test2.exe
+D:\Documents\Intern Project\Argromon2022Tool\test2\obj\Debug\test2.pdb
+C:\Users\pokem\OneDrive\Documents\GitHub\Argomon2022Tool\test2\bin\Debug\argotool1.0.exe.config
+C:\Users\pokem\OneDrive\Documents\GitHub\Argomon2022Tool\test2\bin\Debug\argotool1.0.exe
+C:\Users\pokem\OneDrive\Documents\GitHub\Argomon2022Tool\test2\bin\Debug\argotool1.0.pdb
+C:\Users\pokem\OneDrive\Documents\GitHub\Argomon2022Tool\test2\obj\Debug\argotool1.0.exe
+C:\Users\pokem\OneDrive\Documents\GitHub\Argomon2022Tool\test2\obj\Debug\argotool1.0.pdb
+C:\Users\pokem\OneDrive\Documents\GitHub\Argomon2022Tool\test2\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\pokem\OneDrive\Documents\GitHub\Argomon2022Tool\test2\bin\Debug\System.Security.AccessControl.dll
+C:\Users\pokem\OneDrive\Documents\GitHub\Argomon2022Tool\test2\bin\Debug\System.Security.Permissions.dll
+C:\Users\pokem\OneDrive\Documents\GitHub\Argomon2022Tool\test2\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\pokem\OneDrive\Documents\GitHub\Argomon2022Tool\test2\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\pokem\OneDrive\Documents\GitHub\Argomon2022Tool\test2\bin\Debug\System.Security.AccessControl.xml
+C:\Users\pokem\OneDrive\Documents\GitHub\Argomon2022Tool\test2\bin\Debug\System.Security.Permissions.xml
+C:\Users\pokem\OneDrive\Documents\GitHub\Argomon2022Tool\test2\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\pokem\OneDrive\Documents\GitHub\Argomon2022Tool\test2\obj\Debug\test2.csproj.CopyComplete
+D:\Documents\Intern Project\Argomon2022Tool\test2\bin\Debug\argotool1.0.exe.config
+D:\Documents\Intern Project\Argomon2022Tool\test2\bin\Debug\argotool1.0.exe
+D:\Documents\Intern Project\Argomon2022Tool\test2\bin\Debug\argotool1.0.pdb
+D:\Documents\Intern Project\Argomon2022Tool\test2\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\Documents\Intern Project\Argomon2022Tool\test2\bin\Debug\System.Security.AccessControl.dll
+D:\Documents\Intern Project\Argomon2022Tool\test2\bin\Debug\System.Security.Permissions.dll
+D:\Documents\Intern Project\Argomon2022Tool\test2\bin\Debug\System.Security.Principal.Windows.dll
+D:\Documents\Intern Project\Argomon2022Tool\test2\bin\Debug\System.Configuration.ConfigurationManager.xml
+D:\Documents\Intern Project\Argomon2022Tool\test2\bin\Debug\System.Security.AccessControl.xml
+D:\Documents\Intern Project\Argomon2022Tool\test2\bin\Debug\System.Security.Permissions.xml
+D:\Documents\Intern Project\Argomon2022Tool\test2\bin\Debug\System.Security.Principal.Windows.xml
+D:\Documents\Intern Project\Argomon2022Tool\test2\obj\Debug\test2.csproj.AssemblyReference.cache
+D:\Documents\Intern Project\Argomon2022Tool\test2\obj\Debug\test2.csproj.SuggestedBindingRedirects.cache
+D:\Documents\Intern Project\Argomon2022Tool\test2\obj\Debug\test2.Form1.resources
+D:\Documents\Intern Project\Argomon2022Tool\test2\obj\Debug\test2.Form2.resources
+D:\Documents\Intern Project\Argomon2022Tool\test2\obj\Debug\test2.Form3.resources
+D:\Documents\Intern Project\Argomon2022Tool\test2\obj\Debug\test2.Properties.Resources.resources
+D:\Documents\Intern Project\Argomon2022Tool\test2\obj\Debug\test2.csproj.GenerateResource.cache
+D:\Documents\Intern Project\Argomon2022Tool\test2\obj\Debug\test2.csproj.CoreCompileInputs.cache
+D:\Documents\Intern Project\Argomon2022Tool\test2\obj\Debug\test2.csproj.CopyComplete
+D:\Documents\Intern Project\Argomon2022Tool\test2\obj\Debug\argotool1.0.exe
+D:\Documents\Intern Project\Argomon2022Tool\test2\obj\Debug\argotool1.0.pdb
+D:\Documents\Intern Project\Argromon2022ToolOriginal\test2\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\Documents\Intern Project\Argromon2022ToolOriginal\test2\bin\Debug\System.Security.AccessControl.dll
+D:\Documents\Intern Project\Argromon2022ToolOriginal\test2\bin\Debug\System.Security.Permissions.dll
+D:\Documents\Intern Project\Argromon2022ToolOriginal\test2\bin\Debug\System.Security.Principal.Windows.dll
+D:\Documents\Intern Project\Argromon2022ToolOriginal\test2\bin\Debug\System.Configuration.ConfigurationManager.xml
+D:\Documents\Intern Project\Argromon2022ToolOriginal\test2\bin\Debug\System.Security.AccessControl.xml
+D:\Documents\Intern Project\Argromon2022ToolOriginal\test2\bin\Debug\System.Security.Permissions.xml
+D:\Documents\Intern Project\Argromon2022ToolOriginal\test2\bin\Debug\System.Security.Principal.Windows.xml
+D:\Documents\Intern Project\Argromon2022ToolOriginal\test2\obj\Debug\test2.csproj.AssemblyReference.cache
+D:\Documents\Intern Project\Argromon2022ToolOriginal\test2\obj\Debug\test2.csproj.SuggestedBindingRedirects.cache
+D:\Documents\Intern Project\Argromon2022ToolOriginal\test2\obj\Debug\test2.Form1.resources
+D:\Documents\Intern Project\Argromon2022ToolOriginal\test2\obj\Debug\test2.Form2.resources
+D:\Documents\Intern Project\Argromon2022ToolOriginal\test2\obj\Debug\test2.Form3.resources
+D:\Documents\Intern Project\Argromon2022ToolOriginal\test2\obj\Debug\test2.Properties.Resources.resources
+D:\Documents\Intern Project\Argromon2022ToolOriginal\test2\obj\Debug\test2.csproj.GenerateResource.cache
+D:\Documents\Intern Project\Argromon2022ToolOriginal\test2\obj\Debug\test2.csproj.CoreCompileInputs.cache
+D:\Documents\Intern Project\Argromon2022ToolOriginal\test2\obj\Debug\test2.csproj.CopyComplete
+D:\Documents\Intern Project\Argromon2022ToolOriginal\test2\bin\Debug\System.CodeDom.dll
+D:\Documents\Intern Project\Argromon2022ToolOriginal\test2\bin\Debug\System.CodeDom.xml
+D:\Documents\Intern Project\Argromon2022ToolOriginal\test2\bin\Debug\Agromon Config Tools V 1.0.3.exe.config
+D:\Documents\Intern Project\Argromon2022ToolOriginal\test2\bin\Debug\Agromon Config Tools V 1.0.3.exe
+D:\Documents\Intern Project\Argromon2022ToolOriginal\test2\bin\Debug\Agromon Config Tools V 1.0.3.pdb
+D:\Documents\Intern Project\Argromon2022ToolOriginal\test2\obj\Debug\Agromon Config Tools V 1.0.3.exe
+D:\Documents\Intern Project\Argromon2022ToolOriginal\test2\obj\Debug\Agromon Config Tools V 1.0.3.pdb
