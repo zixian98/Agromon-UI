@@ -11,14 +11,6 @@ namespace test2
         public string dataReceivedForm2;
         public string dataReceivedStringForm2;
         private string sensor_id1, sensor1;
-        //private string[] input1_command_first_eight_sensors = { "0x29", "0x2A", "0x2B", "0x2C", "0x2D", "0x2E", "0x2F", "0x30" }; //system command for setup input 1 first eight sensors
-        //private string[] input1_command_second_eight_sensors = { "0x33", "0x34", "0x35", "0x36", "0x37", "0x38" }; //system command for setup input 1 second eight sensors
-        //private string[] input2_command_first_eight_sensors = { "0x3D", "0x3E", "0x3F", "0x40", "0x41", "0x42", "0x43", "0x44" }; //system command for setup input 2 first eight sensors
-        //private string[] input2_command_second_eight_sensors = { "0x47", "0x48", "0x49", "0x4A", "0x4B", "0x4C" }; //system command for setup input 2 second eight sensors
-        //private string[] input3_command_first_eight_sensors = { "0x51", "0x52", "0x53", "0x54", "0x55", "0x56", "0x57", "0x58" }; //system command for setup input 3 first eight sensors
-        //private string[] input3_command_second_eight_sensors = { "0x5B", "0x5C", "0x5D", "0x5E", "0x5F", "0x60" }; //system command for setup input 3 second eight sensors
-        ////0x65 Wi-Fi, 0x66 LoraWAN , 0x67 Sigfox, 0x68 4G-NETWORK
-        //private string[] network_type_command_setup = { "0x65", "0x66", "0x67", "0x68" }; //system command network setup
 
         public Form2(SerialPort serial_port1)
         {
@@ -26,26 +18,6 @@ namespace test2
             textBox2.PasswordChar = '*';
             textBox2.MaxLength = 100;
             serial_portform2 = serial_port1;
-            serial_portform2.DataReceived += Serial_portform2_DataReceived;
-        }
-
-        private void Serial_portform2_DataReceived(object sender, SerialDataReceivedEventArgs e)
-        {
-            try
-            {
-                dataReceivedForm2 = serial_portform2.ReadLine();
-                this.Invoke(new Action(ProcessingDataForm2));
-            }
-            catch (Exception)
-            {
-                //catch error
-            }
-        }
-
-        private void ProcessingDataForm2()
-        {
-            dataReceivedStringForm2 = dataReceivedForm2.ToString();
-            Console.Write(dataReceivedStringForm2);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -1708,137 +1680,7 @@ namespace test2
 
         private void button16_Click(object sender, EventArgs e)
         {
-            //if (serial_portform2.IsOpen)
-            //{//button to read Input3 configuration from device
-            //    try
-            //    {
-            //        DateTime dateTime = DateTime.Now;
-            //        String timestamp = dateTime.ToString();
-            //        textBox6.Text += timestamp + " Reading Data, Please Wait..." + Environment.NewLine;
-            //        serial_portform2.WriteLine("read" + "\r\n");
-            //        wait(3000);
-            //        serial_portform2.WriteLine("read" + "\r\n");
-            //        wait(3000);
-            //        if (dataReceivedStringForm2 == null)
-            //        {
-            //            sensor_id3 = "";
-            //            if (sensor_id3 == "")
-            //            {
-            //                label24.Text = "Not Available";
-            //                textBox6.Text += timestamp + " Reading Failed" + Environment.NewLine;
-            //            }
-            //        }
-            //        else
-            //        {
-
-            //            sensor_id3 = dataReceivedStringForm2;
-            //            String[] sensor3 = sensor_id3.Split(',');
-            //            if (sensor3[5] == "0")
-            //            {
-            //                int input3A = Convert.ToInt16(sensor3[4]);
-            //                switch(input3A)
-            //                {
-            //                    case 128:
-            //                        label24.Text = "Soil pH";
-            //                        button9.Enabled = true;
-            //                        textBox6.Text += timestamp + ": " + "Connecting to: " + label24.Text + " Sensor" + Environment.NewLine;
-            //                        break;
-            //                    case 64:
-            //                        label24.Text = "Soil Moisture and Temperature";
-            //                        button9.Enabled = true;
-            //                        textBox6.Text += timestamp + ": " + "Connecting to: " + label24.Text + Environment.NewLine;
-            //                        break;
-            //                    case 32:
-            //                        label24.Text = "Soil Electrical Conductivity";
-            //                        button9.Enabled = true;
-            //                        textBox6.Text += timestamp + ": " + "Connecting to: " + label24.Text + Environment.NewLine;
-            //                        break;
-            //                    case 16:
-            //                        label24.Text = "Soil Salinity";
-            //                        button9.Enabled = true;
-            //                        textBox6.Text += timestamp + ": " + "Connecting to: " + label24.Text + Environment.NewLine;
-            //                        break;
-            //                    case 8:
-            //                        label24.Text = "Soil Temperature, Moisture, Salinity and EC";
-            //                        button9.Enabled = true;
-            //                        textBox6.Text += timestamp + ": " + "Connecting to: " + label24.Text + Environment.NewLine;
-            //                        break;
-            //                    case 4:
-            //                        label24.Text = "Soil NPK (Nitrogen-PhosphorousPotassium)";
-            //                        button9.Enabled = true;
-            //                        textBox6.Text += timestamp + ": " + "Connecting to: " + label24.Text + Environment.NewLine;
-            //                        break;
-            //                    case 2:
-            //                        label24.Text = "Water pH Sensor";
-            //                        button9.Enabled = true;
-            //                        textBox6.Text += timestamp + ": " + "Connecting to: " + label24.Text + Environment.NewLine;
-            //                        break;
-            //                    case 1:
-            //                        label24.Text = "Water Dissolved Oxygen Sensor";
-            //                        button9.Enabled = true;
-            //                        textBox6.Text += timestamp + ": " + "Connecting to: " + label24.Text + Environment.NewLine;
-            //                        break;
-            //                }
-
-            //            }
-            //            if (sensor3[4] == "0")
-            //            {
-            //                int input3B = Convert.ToInt16(sensor3[5]);
-            //                switch (input3B)
-            //                {
-            //                    case 128:
-            //                        label24.Text = "Water Ammonia Sensor";
-            //                        button9.Enabled = true;
-            //                        textBox6.Text += timestamp + ": " + "Connecting to: " + label24.Text + " Sensor" + Environment.NewLine;
-            //                        break;
-            //                    case 64:
-            //                        label24.Text = "Water Turbidity Sensor";
-            //                        button9.Enabled = true;
-            //                        textBox6.Text += timestamp + ": " + "Connecting to: " + label24.Text + " Sensor" + Environment.NewLine;
-            //                        break;
-            //                    case 32:
-            //                        label24.Text = "Water Salinity Sensor";
-            //                        button9.Enabled = true;
-            //                        textBox6.Text += timestamp + ": " + "Connecting to: " + label24.Text + " Sensor" + Environment.NewLine;
-            //                        break;
-            //                    case 16:
-            //                        label24.Text = "Ultrasonic Level Meter";
-            //                        button9.Enabled = true;
-            //                        textBox6.Text += timestamp + ": " + "Connecting to: " + label24.Text + " Sensor" + Environment.NewLine;
-            //                        break;
-            //                    case 8:
-            //                        label24.Text = "Pneumatic Level Meter";
-            //                        button9.Enabled = true;
-            //                        textBox6.Text += timestamp + ": " + "Connecting to: " + label24.Text + " Sensor" + Environment.NewLine;
-            //                        break;
-            //                    case 4:
-            //                        label24.Text = "Radar Level Meter";
-            //                        button9.Enabled = true;
-            //                        textBox6.Text += timestamp + ": " + "Connecting to: " + label24.Text + " Sensor" + Environment.NewLine;
-            //                        break;
-
-            //                    default:
-            //                        label24.Text = "Not Available";
-            //                        button9.Enabled = false;
-            //                        textBox6.Text += timestamp + ": " + " Sensor " + label24.Text + Environment.NewLine;
-            //                        break;
-
-            //                }
-            //            }
-            //            if (sensor3[4] == "0" && sensor3[5] == "0")
-            //            {
-            //                label24.Text = "Not Available";
-            //                button9.Enabled = false;
-            //                textBox6.Text += timestamp + " " + "No Sensor in Input 3" + Environment.NewLine;
-            //            }
-            //                label23.Text = "INACTIVE";
-            //        }
-            //    }
-            //    catch (Exception err)
-            //    {
-            //        MessageBox.Show(err.Message);
-            //    }
-            //}
+            
         }
 
         private void wait(int milliseconds)
@@ -1864,14 +1706,12 @@ namespace test2
             }
         }
 
-
         private void Form2_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (serial_portform2.IsOpen)
             {
                 serial_portform2.DiscardOutBuffer();
                 serial_portform2.DiscardInBuffer();
-                serial_portform2.DataReceived -= new SerialDataReceivedEventHandler(Serial_portform2_DataReceived);
             }
         }
     }
