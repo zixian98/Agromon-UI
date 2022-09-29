@@ -1,41 +1,37 @@
 ﻿using System;
-using System.Diagnostics;
 using System.IO.Ports;
-using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using System.Windows.Threading;
 using Application = System.Windows.Forms.Application;
 
 namespace test2
 {
     public partial class Form2 : Form
     {
-        static SerialPort serial_portform2; //define to get the port data from serial.port 1 in form1
         private string ReceivedData; //to receive data
         private string ReceivedDataString; //receive data in string format
         private Encoding serialPortEncoding;
-        public Form2(SerialPort serial_port1)
+        public Form2()
         {
             InitializeComponent();
             textBox2.PasswordChar = '*';
             textBox2.MaxLength = 100;
-            serial_portform2 = serial_port1;
         }
+
 
         //Serial Encoding ASCII
         private void SerialEncoding()
         {
             serialPortEncoding = Encoding.GetEncoding("us-ASCII");
-            serial_portform2.Encoding = serialPortEncoding;
+            serialPort2.Encoding = serialPortEncoding;
         }
-        
+
 
         //Button : Add Network Type and Save Configuration to Agromon
         private void button3_Click(object sender, EventArgs e)
         {
             //Define timestamp for command log.
-            if (serial_portform2.IsOpen)
+            if (serialPort2.IsOpen)
             {
                 //******************************START OF WIFI SETTING******************************************
                 //IF Wi-Fi radiobutton is checked, 
@@ -52,11 +48,11 @@ namespace test2
                     DialogResult result = MessageBox.Show(message, title, buttons);
                     if (result == DialogResult.Yes)
                     {
-                        serial_portform2.WriteLine("WIFISET" + "\r\n"); //Write WIFISET to Agromon to initialise WIFI setup.
+                        serialPort2.WriteLine("WIFISET" + "\r\n"); //Write WIFISET to Agromon to initialise WIFI setup.
                         richTextBox1.Text += "<TX>" + " " + timestamp + " " + "WIFISET" + " " + "<CR><LF>" + Environment.NewLine;
                         wait(2000);
                         richTextBox1.Text += "<RX>" + " " + timestamp + " " + ReceivedData + " " + "<CR><LF>" + Environment.NewLine;
-                        
+
                     }
                 }
                 //******************************END OF WIFI SETTING******************************************
@@ -166,10 +162,10 @@ namespace test2
         private void Form2_Load(object sender, EventArgs e)
         {
             SerialEncoding(); //Serial Encoding Function
-            if (serial_portform2.IsOpen)
+            if (serialPort2.IsOpen)
             {
                 //Define Encoding for Serial Port
-                //serial_portform2.Encoding = Encoding.ASCII;
+                //serialPort1.Encoding = Encoding.ASCII;
                 //IF AVAILABLE: Display Data IF NOT AVAILABLE: Display "Not Available"
                 //*****Wi-FI Information*****
                 //Label 17 Display SSID
@@ -238,7 +234,7 @@ namespace test2
         //Test Button: To test the network configuration of Agromon
         private void button20_Click(object sender, EventArgs e)
         {
-            if (serial_portform2.IsOpen)
+            if (serialPort2.IsOpen)
             {
                 //This button function has not implemented yet.
             }
@@ -247,7 +243,7 @@ namespace test2
         //Read Button : To read the network configuration of Agromon
         private void button13_Click(object sender, EventArgs e)
         {
-            if (serial_portform2.IsOpen)
+            if (serialPort2.IsOpen)
             {
                 try
                 {
@@ -342,10 +338,10 @@ namespace test2
         //Form Close: Disconnect COM Port
         private void Form2_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (serial_portform2.IsOpen)
+            if (serialPort2.IsOpen)
             {
-                serial_portform2.DiscardOutBuffer();
-                serial_portform2.DiscardInBuffer();
+                serialPort2.DiscardOutBuffer();
+                serialPort2.DiscardInBuffer();
             }
         }
 
@@ -385,7 +381,37 @@ namespace test2
             richTextBox4.ScrollToCaret();
         }
 
-        
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            About form3 = new About();
+            form3.ShowDialog();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+            if (serialPort2.IsOpen)
+            {
+                //close connection when application exit
+                serialPort2.Close();
+
+            }
+        }
+
+        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label65_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label67_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
