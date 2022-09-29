@@ -327,7 +327,6 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(116, 26);
             this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -342,7 +341,6 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
             this.aboutToolStripMenuItem.Text = "About";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -491,7 +489,6 @@
             this.label67.Size = new System.Drawing.Size(127, 25);
             this.label67.TabIndex = 0;
             this.label67.Text = "SENSOR 1:";
-            this.label67.Click += new System.EventHandler(this.label67_Click);
             // 
             // groupBox28
             // 
@@ -608,7 +605,6 @@
             this.parity.Name = "parity";
             this.parity.Size = new System.Drawing.Size(258, 30);
             this.parity.TabIndex = 1;
-            this.parity.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
             // 
             // stopbits
             // 
@@ -617,7 +613,6 @@
             this.stopbits.Name = "stopbits";
             this.stopbits.Size = new System.Drawing.Size(258, 30);
             this.stopbits.TabIndex = 1;
-            this.stopbits.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
             // 
             // databits
             // 
@@ -626,7 +621,6 @@
             this.databits.Name = "databits";
             this.databits.Size = new System.Drawing.Size(258, 30);
             this.databits.TabIndex = 1;
-            this.databits.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
             // 
             // baudrate
             // 
@@ -635,7 +629,6 @@
             this.baudrate.Name = "baudrate";
             this.baudrate.Size = new System.Drawing.Size(258, 30);
             this.baudrate.TabIndex = 1;
-            this.baudrate.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
             // 
             // com_status
             // 
@@ -647,7 +640,6 @@
             this.com_status.Size = new System.Drawing.Size(200, 25);
             this.com_status.TabIndex = 0;
             this.com_status.Text = "NOT CONNECTED";
-            this.com_status.Click += new System.EventHandler(this.label65_Click);
             // 
             // label65
             // 
@@ -658,7 +650,6 @@
             this.label65.Size = new System.Drawing.Size(74, 25);
             this.label65.TabIndex = 0;
             this.label65.Text = "Status:";
-            this.label65.Click += new System.EventHandler(this.label65_Click);
             // 
             // label64
             // 
