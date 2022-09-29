@@ -70,3 +70,27 @@ C:\Users\pokem\OneDrive\Desktop\ARGOMON UI\Agromon-Latest-Update-Third_Branch\te
 C:\Users\pokem\OneDrive\Desktop\ARGOMON UI\Agromon-Latest-Update-Third_Branch\test2\obj\Debug\test2.Properties.Resources.resources
 C:\Users\pokem\OneDrive\Desktop\ARGOMON UI\Agromon-Latest-Update-Third_Branch\test2\obj\Debug\Agromon_UI_Hex.csproj.CoreCompileInputs.cache
 C:\Users\pokem\OneDrive\Desktop\ARGOMON UI\Agromon-Latest-Update-Third_Branch\test2\obj\Debug\Agromon_UI_Hex.csproj.CopyComplete
+C:\Users\pokem\Source\Repos\rwong9889\AgroTool-Configuration-Tool\test2\bin\Debug\Agromon Config Tools V 1.2.1.exe.config
+C:\Users\pokem\Source\Repos\rwong9889\AgroTool-Configuration-Tool\test2\bin\Debug\Agromon Config Tools V 1.2.1.exe
+C:\Users\pokem\Source\Repos\rwong9889\AgroTool-Configuration-Tool\test2\bin\Debug\Agromon Config Tools V 1.2.1.pdb
+C:\Users\pokem\Source\Repos\rwong9889\AgroTool-Configuration-Tool\test2\bin\Debug\System.CodeDom.dll
+C:\Users\pokem\Source\Repos\rwong9889\AgroTool-Configuration-Tool\test2\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\pokem\Source\Repos\rwong9889\AgroTool-Configuration-Tool\test2\bin\Debug\System.Security.AccessControl.dll
+C:\Users\pokem\Source\Repos\rwong9889\AgroTool-Configuration-Tool\test2\bin\Debug\System.Security.Permissions.dll
+C:\Users\pokem\Source\Repos\rwong9889\AgroTool-Configuration-Tool\test2\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\pokem\Source\Repos\rwong9889\AgroTool-Configuration-Tool\test2\bin\Debug\System.CodeDom.xml
+C:\Users\pokem\Source\Repos\rwong9889\AgroTool-Configuration-Tool\test2\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\pokem\Source\Repos\rwong9889\AgroTool-Configuration-Tool\test2\bin\Debug\System.Security.AccessControl.xml
+C:\Users\pokem\Source\Repos\rwong9889\AgroTool-Configuration-Tool\test2\bin\Debug\System.Security.Permissions.xml
+C:\Users\pokem\Source\Repos\rwong9889\AgroTool-Configuration-Tool\test2\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\pokem\Source\Repos\rwong9889\AgroTool-Configuration-Tool\test2\obj\Debug\Agromon_UI_Hex.csproj.AssemblyReference.cache
+C:\Users\pokem\Source\Repos\rwong9889\AgroTool-Configuration-Tool\test2\obj\Debug\Agromon_UI_Hex.csproj.SuggestedBindingRedirects.cache
+C:\Users\pokem\Source\Repos\rwong9889\AgroTool-Configuration-Tool\test2\obj\Debug\test2.Form1.resources
+C:\Users\pokem\Source\Repos\rwong9889\AgroTool-Configuration-Tool\test2\obj\Debug\test2.Form2.resources
+C:\Users\pokem\Source\Repos\rwong9889\AgroTool-Configuration-Tool\test2\obj\Debug\test2.Form3.resources
+C:\Users\pokem\Source\Repos\rwong9889\AgroTool-Configuration-Tool\test2\obj\Debug\test2.Properties.Resources.resources
+C:\Users\pokem\Source\Repos\rwong9889\AgroTool-Configuration-Tool\test2\obj\Debug\Agromon_UI_Hex.csproj.GenerateResource.cache
+C:\Users\pokem\Source\Repos\rwong9889\AgroTool-Configuration-Tool\test2\obj\Debug\Agromon_UI_Hex.csproj.CoreCompileInputs.cache
+C:\Users\pokem\Source\Repos\rwong9889\AgroTool-Configuration-Tool\test2\obj\Debug\Agromon_UI_Hex.csproj.CopyComplete
+C:\Users\pokem\Source\Repos\rwong9889\AgroTool-Configuration-Tool\test2\obj\Debug\Agromon Config Tools V 1.2.1.exe
+C:\Users\pokem\Source\Repos\rwong9889\AgroTool-Configuration-Tool\test2\obj\Debug\Agromon Config Tools V 1.2.1.pdb
