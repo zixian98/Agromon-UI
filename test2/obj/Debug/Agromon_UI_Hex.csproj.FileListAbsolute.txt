@@ -96,15 +96,9 @@ C:\Users\pokem\Source\Repos\rwong9889\AgroTool-Configuration-Tool\test2\obj\Debu
 C:\Users\pokem\Source\Repos\rwong9889\AgroTool-Configuration-Tool\test2\obj\Debug\Agromon Config Tools V 1.2.1.pdb
 D:\Documents\Intern Project\Latest\test2\obj\Debug\Agromon_UI_Hex.csproj.AssemblyReference.cache
 D:\Documents\Intern Project\Latest\test2\obj\Debug\Agromon_UI_Hex.csproj.SuggestedBindingRedirects.cache
-D:\Documents\Intern Project\Latest\test2\obj\Debug\test2.Form2.resources
 D:\Documents\Intern Project\Latest\test2\obj\Debug\test2.Properties.Resources.resources
 D:\Documents\Intern Project\Latest\test2\obj\Debug\Agromon_UI_Hex.csproj.GenerateResource.cache
 D:\Documents\Intern Project\Latest\test2\obj\Debug\Agromon_UI_Hex.csproj.CoreCompileInputs.cache
-D:\Documents\Intern Project\Latest\test2\obj\Debug\Agromon Config Tools V 1.2.1.exe
-D:\Documents\Intern Project\Latest\test2\obj\Debug\Agromon Config Tools V 1.2.1.pdb
-D:\Documents\Intern Project\Latest\test2\bin\Debug\Agromon Config Tools V 1.2.1.exe.config
-D:\Documents\Intern Project\Latest\test2\bin\Debug\Agromon Config Tools V 1.2.1.exe
-D:\Documents\Intern Project\Latest\test2\bin\Debug\Agromon Config Tools V 1.2.1.pdb
 D:\Documents\Intern Project\Latest\test2\bin\Debug\System.CodeDom.dll
 D:\Documents\Intern Project\Latest\test2\bin\Debug\System.Configuration.ConfigurationManager.dll
 D:\Documents\Intern Project\Latest\test2\bin\Debug\System.Security.AccessControl.dll
@@ -117,3 +111,9 @@ D:\Documents\Intern Project\Latest\test2\bin\Debug\System.Security.Permissions.x
 D:\Documents\Intern Project\Latest\test2\bin\Debug\System.Security.Principal.Windows.xml
 D:\Documents\Intern Project\Latest\test2\obj\Debug\Agromon_UI_Hex.csproj.CopyComplete
 D:\Documents\Intern Project\Latest\test2\obj\Debug\test2.About.resources
+D:\Documents\Intern Project\Latest\test2\obj\Debug\test2.Main.resources
+D:\Documents\Intern Project\Latest\test2\bin\Debug\Agromon Config Tools V 2.0.30922.exe.config
+D:\Documents\Intern Project\Latest\test2\bin\Debug\Agromon Config Tools V 2.0.30922.exe
+D:\Documents\Intern Project\Latest\test2\bin\Debug\Agromon Config Tools V 2.0.30922.pdb
+D:\Documents\Intern Project\Latest\test2\obj\Debug\Agromon Config Tools V 2.0.30922.exe
+D:\Documents\Intern Project\Latest\test2\obj\Debug\Agromon Config Tools V 2.0.30922.pdb
