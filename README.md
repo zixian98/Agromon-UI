@@ -17,6 +17,12 @@
 <p>
  <ul>
         <li>
+            V 1.3.0 
+            <ol>
+                <li>Network configuration page user interface update</li>
+            </ol>
+        </li>
+        <li>
             V 1.2.1
             <ol>
                 <li>Add more selection when selecting network type</li>
