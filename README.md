@@ -27,7 +27,7 @@
         <li>
             V 1.3.0 
             <ol>
-            <li>Network configuration page user interface update</li>
+                <li>Network configuration page user interface update</li>
             </ol>
         </li>
         <li>
