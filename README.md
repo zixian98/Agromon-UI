@@ -1,5 +1,4 @@
 # Argomon 2022 Configuration Tools
- >Works with Agromon Hardware
 <p align="center">
     <img src="https://www.wondernica.com/assets/img/Agromon.png" alt="alternatetext"> </img>
 </p>
@@ -9,6 +8,10 @@
  customization is provided.
  Agromon comes with 3 sensors input or with 2 sensors input.
 </p>
+
+<h3> Progres Report </h3>
+
+![](http://us-central1-progress-markdown.cloudfunctions.net/progress/60)
 
 <h3>Version Update</h3>
 <p>
