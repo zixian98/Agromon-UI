@@ -11,11 +11,25 @@
 
 <h3> Progres Report </h3>
 
-![](http://us-central1-progress-markdown.cloudfunctions.net/progress/60)
+![](http://us-central1-progress-markdown.cloudfunctions.net/progress/0)
 
 <h3>Version Update</h3>
 <p>
  <ul>
+        <li>
+            V 2.0.30922
+            <ol>
+                <li>Combine interface of form 1 to form 2.</li>
+                <li>Make easy acess to the configuration page</li>
+                <li>Remove configuration button</li> 
+            </ol>
+        </li>
+        <li>
+            V 1.3.0 
+            <ol>
+            <li>Network configuration page user interface update</li>
+            </ol>
+        </li>
         <li>
             V 1.2.1
             <ol>
