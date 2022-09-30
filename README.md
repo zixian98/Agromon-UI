@@ -75,3 +75,7 @@
         </li>
     </ul>
 </p>
+<h2>Developer</h2>
+<a href="https://github.com/AgentHitmanFaris/Agromon-UI/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=AgentHitmanFaris/Agromon-UI" />
+</a>
