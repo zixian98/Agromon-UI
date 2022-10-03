@@ -1,4 +1,4 @@
-# Argomon 2022 Configuration Tools (Stable Version)
+# Argomon 2022 Configuration Tools
 <p align="center">
     <img src="https://www.wondernica.com/assets/img/Agromon.png" alt="alternatetext"> </img>
 </p>
