@@ -11,6 +11,8 @@
 
 <h3> Progres Report </h3>
 
+>Apps as it's fully operate with the real hardware
+
 ![](http://us-central1-progress-markdown.cloudfunctions.net/progress/60)
 
 <h3>Version Update</h3>
