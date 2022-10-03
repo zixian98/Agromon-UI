@@ -9,9 +9,10 @@
  Agromon comes with 3 sensors input or with 2 sensors input.
 </p>
 
-<h3> Progres Report </h3>
-
-![](http://us-central1-progress-markdown.cloudfunctions.net/progress/0)
+### Developer
+<a href="https://github.com/AgentHitmanFaris/Agromon-UI/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=AgentHitmanFaris/Agromon-UI" />
+</a>
 
 <h3>Version Update</h3>
 <p>
@@ -83,7 +84,10 @@
         </li>
     </ul>
 </p>
-<h2>Developer</h2>
-<a href="https://github.com/AgentHitmanFaris/Agromon-UI/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=AgentHitmanFaris/Agromon-UI" />
-</a>
+
+## Under Research
+- [ ] LoRaWan configuration
+![image](https://user-images.githubusercontent.com/81744011/193539505-af7940d4-f788-4790-bee6-af0890a3cc63.png)
+
+- [ ] Sensor cofiguration
+![image](https://user-images.githubusercontent.com/81744011/193539615-f3b04f05-87ec-4b26-b6d6-a5bde7a65b21.png)
