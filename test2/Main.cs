@@ -14,8 +14,8 @@ namespace test2
     public partial class Main : Form
     {
         public SerialPort serial_port2;
-        public string DataReceived; //Variable to store RX data
-        public string DataReceivedString, sensor_id; //Varialbe to store RX data converted to string
+        public string DataReceived;
+        public string DataReceivedString, sensor_id;
         private Encoding serialPortEncoding;
         public Main()
         {
@@ -36,16 +36,17 @@ namespace test2
         //Button : Add Network Type and Save Configuration to Agromon
         private void button3_Click(object sender, EventArgs e)
         {
+            DateTime dateTime = DateTime.Now;
+            String timestamp = dateTime.ToString("hh:mm:ss");
             //Define timestamp for command log.
             if (serialPort2.IsOpen)
             {
                 //******************************START OF WIFI SETTING******************************************
                 //IF Wi-Fi radiobutton is checked, 
                 int wifisetting_state;
+                string a, b, c, d, f;
                 if (radioButton1.Checked == true && textBox1.Text.Length != 0 && textBox2.Text.Length != 0)
                 {
-                    DateTime dateTime = DateTime.Now;
-                    String timestamp = dateTime.ToString();
                     //Received Data
                     //Alert Message
                     string message = "Are you sure to add the network?";
@@ -56,49 +57,64 @@ namespace test2
                     DialogResult result = MessageBox.Show(message, title, buttons);
                     if (result == DialogResult.Yes)
                     {
+                        serialPort2.DiscardOutBuffer();
+                        serialPort2.DiscardInBuffer();
                         wifisetting_state += 1;
                         if (wifisetting_state == 1)
                         {
                             serialPort2.Write("WIFISET" + "\r\n"); //Write WIFISET to Agromon to initialise WIFI setup.
                             richTextBox1.Text += "<TX>" + " " + timestamp + " " + "WIFISET" + " " + "<CR><LF>" + Environment.NewLine;
-                            wait(3000);
-                            richTextBox1.Text += "<RX>" + " " + timestamp + " " + DataReceived + " " + "<CR><LF>" + Environment.NewLine;
-                            if (DataReceived == "OK")
+                            wait(2000);
+                            a = serialPort2.ReadLine();
+                            string[] DataReceivedStrings1 = a.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                            richTextBox1.Text += "<RX>" + " " + timestamp + " " + DataReceivedStrings1[0] + " " + "<CR><LF>" + Environment.NewLine;
+                            wait(2000);
+                            if (DataReceivedStrings1[0] == "OK")
                             {
                                 serialPort2.Write("SSID" + "\r\n"); //Write SSID to Agromon to initialise SSID setup.
                                 richTextBox1.Text += "<TX>" + " " + timestamp + " " + "SSID" + " " + "<CR><LF>" + Environment.NewLine;
-                                wait(3000);
-                                richTextBox1.Text += "<RX>" + " " + timestamp + " " + DataReceived + " " + "<CR><LF>" + Environment.NewLine;
-                                if (DataReceived == "OK")
+                                wait(1000);
+                                b = serialPort2.ReadLine();
+                                string[] DataReceivedStrings2 = b.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                                richTextBox1.Text += "<RX>" + " " + timestamp + " " + DataReceivedStrings2[0] + " " + "<CR><LF>" + Environment.NewLine;
+                                if (DataReceivedStrings2[0] == "OK")
                                 {
-                                    wifisetting_state += 1;
+                                    wifisetting_state = 2;
                                     if (wifisetting_state == 2)
                                     {
-                                        serialPort2.Write(textBox1.Text + "\r\n"); //Write SSID name to Agromon to initialise setup.
+                                        serialPort2.Write(textBox1.Text); //Write SSID name to Agromon
                                         richTextBox1.Text += "<TX>" + " " + timestamp + " " + textBox1.Text + " " + "<CR><LF>" + Environment.NewLine;
-                                        wait(3000);
-                                        richTextBox1.Text += "<RX>" + " " + timestamp + " " + DataReceived + " " + "<CR><LF>" + Environment.NewLine;
-                                        if (String.Equals("OK", DataReceived))
+                                        wait(1000);
+                                        c = serialPort2.ReadLine();
+                                        string[] DataReceivedStrings3 = c.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                                        richTextBox1.Text += "<RX>" + " " + timestamp + " " + DataReceivedStrings3[0] + " " + "<CR><LF>" + Environment.NewLine;
+                                        if (DataReceivedStrings3[0] == "OK")
                                         {
                                             wifisetting_state += 1;
                                             if (wifisetting_state == 3)
                                             {
-                                                serialPort2.Write("PASSWORD" + "\r\n"); //Write PASSWORD  to Agromon to initialise PASSWORD setup.
-                                                richTextBox1.Text += "<TX>" + " " + timestamp + " " + "PASSWORD" + " " + "<CR><LF>" + Environment.NewLine;
                                                 wait(3000);
-                                                richTextBox1.Text += "<RX>" + " " + timestamp + " " + DataReceived + " " + "<CR><LF>" + Environment.NewLine;
-                                                if (String.Equals("OK", DataReceived))
+                                                serialPort2.Write("PASSWORD"); //Write PASSWORD  to Agromon to initialise PASSWORD setup.
+                                                richTextBox1.Text += "<TX>" + " " + timestamp + " " + "PASSWORD" + " " + "<CR><LF>" + Environment.NewLine;
+                                                wait(1000);
+                                                d = serialPort2.ReadLine();
+                                                string[] DataReceivedStrings4 = d.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                                                richTextBox1.Text += "<RX>" + " " + timestamp + " " + DataReceivedStrings4[0] + " " + "<CR><LF>" + Environment.NewLine;
+                                                if (DataReceivedStrings4[0] == "OK")
                                                 {
                                                     wifisetting_state += 1;
                                                     if (wifisetting_state == 4)
                                                     {
-                                                        serialPort2.Write(textBox2.Text + "\r\n"); //Write password  to Agromon to initialise setup.
+                                                        serialPort2.Write(textBox2.Text); //Write password  to Agromon
                                                         richTextBox1.Text += "<TX>" + " " + timestamp + " " + textBox2.Text + " " + "<CR><LF>" + Environment.NewLine;
-                                                        wait(3000);
-                                                        richTextBox1.Text += "<RX>" + " " + timestamp + " " + DataReceived + " " + "<CR><LF>" + Environment.NewLine;
-                                                        if (String.Equals("OK", DataReceived))
+                                                        wait(1000);
+                                                        f = serialPort2.ReadLine();
+                                                        string[] DataReceivedStrings5 = f.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                                                        richTextBox1.Text += "<RX>" + " " + timestamp + " " + DataReceivedStrings5[0] + " " + "<CR><LF>" + Environment.NewLine;
+                                                        if (DataReceivedStrings5[0] == "OK")
                                                         {
                                                             wifisetting_state = 0; //Wi-Fi Setup Done
+                                                            richTextBox1.Text += "<TX>" + " " + timestamp + " WIFISET DONE " + "<CR><LF>" + Environment.NewLine;
                                                         }
                                                         else
                                                         {
@@ -154,125 +170,238 @@ namespace test2
                 //******************************START OF SIGFOX SETTING**************************************
                 if (radioButton2.Checked == true && comboBox2.Text != "Select RC")
                 {
-                    DateTime dateTime = DateTime.Now;
-                    String timestamp = dateTime.ToString();
-                    int sigfox_setup_state = 0;
-                    int frequency_selection = comboBox2.SelectedIndex;
-                    serialPort2.Write("SIGFOXSET" + "\r\n"); //Write SIGFOXSET to initialise Sigfox Setting
-                    richTextBox1.Text += "<TX>" + " " + timestamp + " " + "SIGFOXSET" + " " + "<CR><LF>" + Environment.NewLine;
-                    wait(3000);
-                    if (String.Equals("OK", DataReceived))
+                    string message = "Are you sure to add the network?";
+                    string title = "Confirm";
+                    wifisetting_state = 0;
+                    MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                    //Button Result : IF Yes then start network configuration setup
+                    DialogResult result = MessageBox.Show(message, title, buttons);
+                    if (result == DialogResult.Yes)
                     {
-                        sigfox_setup_state += 1;
-                        if (sigfox_setup_state == 1)
+                        serialPort2.DiscardOutBuffer();
+                        serialPort2.DiscardInBuffer();
+
+                        int sigfox_setup_state = 0;
+                        int frequency_selection = comboBox2.SelectedIndex;
+                        serialPort2.Write("SIGFOXSET"); //Write SIGFOXSET to initialise Sigfox Setting
+                        richTextBox1.Text += "<TX>" + " " + timestamp + " " + "SIGFOXSET" + " " + "<CR><LF>" + Environment.NewLine;
+                        a = serialPort2.ReadLine();
+                        string[] DataReceivedStrings1 = a.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                        richTextBox1.Text += "<TX>" + " " + timestamp + " " + DataReceivedStrings1[0] + " " + "<CR><LF>" + Environment.NewLine;
+                        wait(1000);
+                        if (DataReceivedStrings1[0] == "OK")
                         {
-                            switch (frequency_selection)
+                            sigfox_setup_state += 1;
+                            if (sigfox_setup_state == 1)
                             {
-                                case 0:
-                                    serialPort2.Write("RC1" + "\r\n"); //Write RC1  to Agromon to initialise setup RC1 frequency setup.
-                                    richTextBox1.Text += "<TX>" + " " + timestamp + " " + "RC1" + " " + "<CR><LF>" + Environment.NewLine;
-                                    wait(3000);
-                                    if (String.Equals("OK", DataReceived))
-                                    {
-                                        richTextBox1.Text += "<RX>" + " " + timestamp + " " + "OK" + " " + "<CR><LF>" + Environment.NewLine;
-                                    }
-                                    else
-                                    {
-                                        richTextBox1.Text += "<RX>" + " " + timestamp + " " + "ERROR" + " " + "<CR><LF>" + Environment.NewLine;
-                                    }
-                                    break;
-                                case 1:
-                                    serialPort2.Write("RC2" + "\r\n"); //Write RC2  to Agromon to initialise setup RC2 frequency setup.
-                                    richTextBox1.Text += "<TX>" + " " + timestamp + " " + "RC2" + " " + "<CR><LF>" + Environment.NewLine;
-                                    wait(3000);
-                                    if (String.Equals("OK", DataReceived))
-                                    {
-                                        richTextBox1.Text += "<RX>" + " " + timestamp + " " + "OK" + " " + "<CR><LF>" + Environment.NewLine;
-                                    }
-                                    else
-                                    {
-                                        richTextBox1.Text += "<RX>" + " " + timestamp + " " + "ERROR" + " " + "<CR><LF>" + Environment.NewLine;
-                                    }
-                                    break;
-                                case 2:
-                                    serialPort2.Write("RC3" + "\r\n"); //Write RC3  to Agromon to initialise setup RC3 frequency setup.
-                                    richTextBox1.Text += "<TX>" + " " + timestamp + " " + "RC3" + " " + "<CR><LF>" + Environment.NewLine;
-                                    wait(3000);
-                                    if (String.Equals("OK", DataReceived))
-                                    {
-                                        richTextBox1.Text += "<RX>" + " " + timestamp + " " + "OK" + " " + "<CR><LF>" + Environment.NewLine;
-                                    }
-                                    else
-                                    {
-                                        richTextBox1.Text += "<RX>" + " " + timestamp + " " + "ERROR" + " " + "<CR><LF>" + Environment.NewLine;
-                                    }
-                                    break;
-                                case 3:
-                                    serialPort2.Write("RC4" + "\r\n"); //Write RC4  to Agromon to initialise setup RC4 frequency setup.
-                                    richTextBox1.Text += "<TX>" + " " + timestamp + " " + "RC4" + " " + "<CR><LF>" + Environment.NewLine;
-                                    wait(3000);
-                                    if (String.Equals("OK", DataReceived))
-                                    {
-                                        richTextBox1.Text += "<RX>" + " " + timestamp + " " + "OK" + " " + "<CR><LF>" + Environment.NewLine;
-                                    }
-                                    else
-                                    {
-                                        richTextBox1.Text += "<RX>" + " " + timestamp + " " + "ERROR" + " " + "<CR><LF>" + Environment.NewLine;
-                                    }
-                                    break;
-                                case 4:
-                                    serialPort2.Write("RC5" + "\r\n"); //Write RC5  to Agromon to initialise setup RC5 frequency setup.
-                                    richTextBox1.Text += "<TX>" + " " + timestamp + " " + "RC5" + " " + "<CR><LF>" + Environment.NewLine;
-                                    wait(3000);
-                                    if (String.Equals("OK", DataReceived))
-                                    {
-                                        richTextBox1.Text += "<RX>" + " " + timestamp + " " + "OK" + " " + "<CR><LF>" + Environment.NewLine;
-                                    }
-                                    else
-                                    {
-                                        richTextBox1.Text += "<RX>" + " " + timestamp + " " + "ERROR" + " " + "<CR><LF>" + Environment.NewLine;
-                                    }
-                                    break;
-                                case 5:
-                                    serialPort2.Write("RC6" + "\r\n"); //Write RC6  to Agromon to initialise setup RC6 frequency setup.
-                                    richTextBox1.Text += "<TX>" + " " + timestamp + " " + "RC6" + " " + "<CR><LF>" + Environment.NewLine;
-                                    wait(3000);
-                                    if (String.Equals("OK", DataReceived))
-                                    {
-                                        richTextBox1.Text += "<RX>" + " " + timestamp + " " + "OK" + " " + "<CR><LF>" + Environment.NewLine;
-                                    }
-                                    else
-                                    {
-                                        richTextBox1.Text += "<RX>" + " " + timestamp + " " + "ERROR" + " " + "<CR><LF>" + Environment.NewLine;
-                                    }
-                                    break;
-                                case 6:
-                                    serialPort2.Write("RC7" + "\r\n"); //Write RC7  to Agromon to initialise setup RC7 frequency setup.
-                                    richTextBox1.Text += "<TX>" + " " + timestamp + " " + "RC7" + " " + "<CR><LF>" + Environment.NewLine;
-                                    wait(3000);
-                                    if (String.Equals("OK", DataReceived))
-                                    {
-                                        richTextBox1.Text += "<RX>" + " " + timestamp + " " + "OK" + " " + "<CR><LF>" + Environment.NewLine;
-                                    }
-                                    else
-                                    {
-                                        richTextBox1.Text += "<RX>" + " " + timestamp + " " + "ERROR" + " " + "<CR><LF>" + Environment.NewLine;
-                                    }
-                                    break;
-                                default:
-                                    break;
+                                switch (frequency_selection)
+                                {
+                                    case 0:
+                                        serialPort2.Write("RC1"); //Write RC1  to Agromon to initialise setup RC1 frequency setup.
+                                        richTextBox1.Text += "<TX>" + " " + timestamp + " " + "RC1" + " " + "<CR><LF>" + Environment.NewLine;
+                                        b = serialPort2.ReadLine();
+                                        string[] DataReceivedStrings2 = b.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                                        wait(3000);
+                                        if (DataReceivedStrings2[0] == "OK")
+                                        {
+                                            richTextBox1.Text += "<RX>" + " " + timestamp + " " + DataReceivedStrings2[0] + " " + "<CR><LF>" + Environment.NewLine;
+                                            wait(300);
+                                            richTextBox1.Text += "<TX>" + " " + timestamp + " SIGFOXSET DONE " + "<CR><LF>" + Environment.NewLine;
+                                        }
+                                        else
+                                        {
+                                            richTextBox1.Text += "<RX>" + " " + timestamp + " " + "ERROR" + " " + "<CR><LF>" + Environment.NewLine;
+                                        }
+                                        break;
+                                    case 1:
+                                        serialPort2.Write("RC2"); //Write RC1  to Agromon to initialise setup RC1 frequency setup.
+                                        richTextBox1.Text += "<TX>" + " " + timestamp + " " + "RC2" + " " + "<CR><LF>" + Environment.NewLine;
+                                        b = serialPort2.ReadLine();
+                                        string[] DataReceivedStrings3 = b.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                                        wait(3000);
+                                        if (DataReceivedStrings3[0] == "OK")
+                                        {
+                                            richTextBox1.Text += "<RX>" + " " + timestamp + " " + DataReceivedStrings3[0] + " " + "<CR><LF>" + Environment.NewLine;
+                                            wait(300);
+                                            richTextBox1.Text += "<TX>" + " " + timestamp + " SIGFOXSET DONE " + "<CR><LF>" + Environment.NewLine;
+                                        }
+                                        else
+                                        {
+                                            richTextBox1.Text += "<RX>" + " " + timestamp + " " + "ERROR" + " " + "<CR><LF>" + Environment.NewLine;
+                                        }
+                                        break;
+                                    case 2:
+                                        serialPort2.Write("RC3"); //Write RC1  to Agromon to initialise setup RC1 frequency setup.
+                                        richTextBox1.Text += "<TX>" + " " + timestamp + " " + "RC3" + " " + "<CR><LF>" + Environment.NewLine;
+                                        b = serialPort2.ReadLine();
+                                        string[] DataReceivedStrings4 = b.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                                        wait(3000);
+                                        if (DataReceivedStrings4[0] == "OK")
+                                        {
+                                            richTextBox1.Text += "<RX>" + " " + timestamp + " " + DataReceivedStrings4[0] + " " + "<CR><LF>" + Environment.NewLine;
+                                            wait(300);
+                                            richTextBox1.Text += "<TX>" + " " + timestamp + " SIGFOXSET DONE " + "<CR><LF>" + Environment.NewLine;
+                                        }
+                                        else
+                                        {
+                                            richTextBox1.Text += "<RX>" + " " + timestamp + " " + "ERROR" + " " + "<CR><LF>" + Environment.NewLine;
+                                        }
+                                        break;
+                                    case 3:
+                                        serialPort2.Write("RC4"); //Write RC1  to Agromon to initialise setup RC1 frequency setup.
+                                        richTextBox1.Text += "<TX>" + " " + timestamp + " " + "RC4" + " " + "<CR><LF>" + Environment.NewLine;
+                                        b = serialPort2.ReadLine();
+                                        string[] DataReceivedStrings5 = b.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                                        wait(3000);
+                                        if (DataReceivedStrings5[0] == "OK")
+                                        {
+                                            richTextBox1.Text += "<RX>" + " " + timestamp + " " + DataReceivedStrings5[0] + " " + "<CR><LF>" + Environment.NewLine;
+                                            wait(300);
+                                            richTextBox1.Text += "<TX>" + " " + timestamp + " SIGFOXSET DONE " + "<CR><LF>" + Environment.NewLine;
+                                        }
+                                        else
+                                        {
+                                            richTextBox1.Text += "<RX>" + " " + timestamp + " " + "ERROR" + " " + "<CR><LF>" + Environment.NewLine;
+                                        }
+                                        break;
+                                    case 4:
+                                        serialPort2.Write("RC5"); //Write RC1  to Agromon to initialise setup RC1 frequency setup.
+                                        richTextBox1.Text += "<TX>" + " " + timestamp + " " + "RC5" + " " + "<CR><LF>" + Environment.NewLine;
+                                        b = serialPort2.ReadLine();
+                                        string[] DataReceivedStrings6 = b.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                                        wait(3000);
+                                        if (DataReceivedStrings6[0] == "OK")
+                                        {
+                                            richTextBox1.Text += "<RX>" + " " + timestamp + " " + DataReceivedStrings6[0] + " " + "<CR><LF>" + Environment.NewLine;
+                                            wait(300);
+                                            richTextBox1.Text += "<TX>" + " " + timestamp + " SIGFOXSET DONE " + "<CR><LF>" + Environment.NewLine;
+                                        }
+                                        else
+                                        {
+                                            richTextBox1.Text += "<RX>" + " " + timestamp + " " + "ERROR" + " " + "<CR><LF>" + Environment.NewLine;
+                                        }
+                                        break;
+                                    case 5:
+                                        serialPort2.Write("RC6"); //Write RC1  to Agromon to initialise setup RC1 frequency setup.
+                                        richTextBox1.Text += "<TX>" + " " + timestamp + " " + "RC6" + " " + "<CR><LF>" + Environment.NewLine;
+                                        b = serialPort2.ReadLine();
+                                        string[] DataReceivedStrings7 = b.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                                        wait(3000);
+                                        if (DataReceivedStrings7[0] == "OK")
+                                        {
+                                            richTextBox1.Text += "<RX>" + " " + timestamp + " " + DataReceivedStrings7[0] + " " + "<CR><LF>" + Environment.NewLine;
+                                            wait(300);
+                                            richTextBox1.Text += "<TX>" + " " + timestamp + " SIGFOXSET DONE " + "<CR><LF>" + Environment.NewLine;
+                                        }
+                                        else
+                                        {
+                                            richTextBox1.Text += "<RX>" + " " + timestamp + " " + "ERROR" + " " + "<CR><LF>" + Environment.NewLine;
+                                        }
+                                        break;
+                                    case 6:
+                                        serialPort2.Write("RC7"); //Write RC1  to Agromon to initialise setup RC1 frequency setup.
+                                        richTextBox1.Text += "<TX>" + " " + timestamp + " " + "RC7" + " " + "<CR><LF>" + Environment.NewLine;
+                                        b = serialPort2.ReadLine();
+                                        string[] DataReceivedStrings8 = b.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                                        wait(3000);
+                                        if (DataReceivedStrings8[0] == "OK")
+                                        {
+                                            richTextBox1.Text += "<RX>" + " " + timestamp + " " + DataReceivedStrings8[0] + " " + "<CR><LF>" + Environment.NewLine;
+                                            wait(300);
+                                            richTextBox1.Text += "<TX>" + " " + timestamp + " SIGFOXSET DONE " + "<CR><LF>" + Environment.NewLine;
+                                        }
+                                        else
+                                        {
+                                            richTextBox1.Text += "<RX>" + " " + timestamp + " " + "ERROR" + " " + "<CR><LF>" + Environment.NewLine;
+                                        }
+                                        break;
+                                    default:
+                                        break;
+                                }
                             }
                         }
                     }
-
                 }
                 //******************************END OF SIGFOX SETTING**************************************
 
-                //******************************START OF LoraWAN SETTING**************************************
+                //******************************START OF LoRaWAN SETTING**************************************
                 if (radioButton3.Checked == true)
                 {
 
                 }
+                //******************************END OF LoRaWAN SETTING**************************************
+
+                //******************************START OF 4G SETTING**************************************
+                if (radioButton4.Checked == true)
+                {
+                    string message = "Are you sure to add the network?";
+                    string title = "Confirm";
+                    MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                    //Button Result : IF Yes then start network configuration setup
+                    DialogResult result = MessageBox.Show(message, title, buttons);
+                    if (result == DialogResult.Yes)
+                    {
+                        serialPort2.DiscardOutBuffer();
+                        serialPort2.DiscardInBuffer();
+                        int lte_setup_state = 0;
+                        int lte_selection = comboBox3.SelectedIndex;
+                        serialPort2.Write("LTSET "); //Write 4G to initialise 4G Setting
+                        richTextBox1.Text += "<TX>" + " " + timestamp + " " + "LTSET" + " " + "<CR><LF>" + Environment.NewLine;
+                        a = serialPort2.ReadLine();
+                        string[] DataReceivedStrings1 = a.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                        richTextBox1.Text += "<TX>" + " " + timestamp + " " + DataReceivedStrings1[0] + " " + "<CR><LF>" + Environment.NewLine;
+                        wait(1000);
+                        if (DataReceivedStrings1[0] == "OK")
+                        {
+                            lte_setup_state += 1;
+                            if (lte_setup_state == 1)
+                            {
+                                switch (lte_selection)
+                                {
+                                    case 0:
+                                        serialPort2.Write("SIM"); //Write SIM  to Agromon to initialise setup SIM frequency setup.
+                                        richTextBox1.Text += "<TX>" + " " + timestamp + " " + "SIM" + " " + "<CR><LF>" + Environment.NewLine;
+                                        b = serialPort2.ReadLine();
+                                        string[] DataReceivedStrings2 = b.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                                        wait(3000);
+                                        if (DataReceivedStrings2[0] == "OK")
+                                        {
+                                            richTextBox1.Text += "<RX>" + " " + timestamp + " " + DataReceivedStrings2[0] + " " + "<CR><LF>" + Environment.NewLine;
+                                            wait(300);
+                                            richTextBox1.Text += "<TX>" + " " + timestamp + " 4GSET DONE " + "<CR><LF>" + Environment.NewLine;
+                                        }
+                                        else
+                                        {
+                                            richTextBox1.Text += "<RX>" + " " + timestamp + " " + "ERROR" + " " + "<CR><LF>" + Environment.NewLine;
+                                        }
+                                        break;
+
+                                    case 1:
+                                        serialPort2.Write("eSIM"); //Write eSIM  to Agromon to initialise setup eSIM frequency setup.
+                                        richTextBox1.Text += "<TX>" + " " + timestamp + " " + "eSIM" + " " + "<CR><LF>" + Environment.NewLine;
+                                        b = serialPort2.ReadLine();
+                                        string[] DataReceivedStrings3 = b.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                                        wait(3000);
+                                        if (DataReceivedStrings3[0] == "OK")
+                                        {
+                                            richTextBox1.Text += "<RX>" + " " + timestamp + " " + DataReceivedStrings3[0] + " " + "<CR><LF>" + Environment.NewLine;
+                                            wait(300);
+                                            richTextBox1.Text += "<TX>" + " " + timestamp + " 4GSET DONE " + "<CR><LF>" + Environment.NewLine;
+                                        }
+                                        else
+                                        {
+                                            richTextBox1.Text += "<RX>" + " " + timestamp + " " + "ERROR" + " " + "<CR><LF>" + Environment.NewLine;
+                                        }
+                                        break;
+
+                                    default:
+                                        break;
+                                }
+                            }
+                        }
+                    }
+                }
+                //******************************END OF 4G SETTING**************************************
             }
         }
 
@@ -339,8 +468,8 @@ namespace test2
         {
             groupBox13.Enabled = false; //Enable Groupbox 13
             groupBox14.Enabled = false; //Enable Groupbox 14
-            groupBox15.Enabled = true; //Enable Groupbox 15
-            groupBox16.Enabled = false; //Enable Groupbox 16
+            groupBox16.Enabled = true; //Enable Groupbox 15
+            groupBox15.Enabled = false; //Enable Groupbox 16
             tabControl2.SelectedIndex = 2; //Select LoraWAN Tab = 2
         }
 
@@ -349,8 +478,8 @@ namespace test2
         {
             groupBox13.Enabled = false; //Enable Groupbox 13
             groupBox14.Enabled = false; //Enable Groupbox 14
-            groupBox15.Enabled = false; //Enable Groupbox 15
-            groupBox16.Enabled = true; //Enable Groupbox 16
+            groupBox16.Enabled = false; //Enable Groupbox 15
+            groupBox15.Enabled = true; //Enable Groupbox 16
             tabControl2.SelectedIndex = 3; //Select LoraWAN Tab = 3
         }
 
@@ -396,7 +525,7 @@ namespace test2
             stopbits.Enabled = true;
             parity.Enabled = true;
             //disable configure button if not connected
-            disconnect_button.Enabled = false;  
+            disconnect_button.Enabled = false;
             LoadConfigurationSettings();
 
             SerialEncoding(); //Serial Encoding Function
@@ -481,11 +610,34 @@ namespace test2
         //Read Button : To read the network configuration of Agromon
         private void button13_Click(object sender, EventArgs e)
         {
+            string a;
+            DateTime dateTime = DateTime.Now;
+            String timestamp = dateTime.ToString("hh:mm:ss");
             if (serialPort2.IsOpen)
             {
                 try
                 {
-                    //This button function has not implemented yet.
+                    serialPort2.DiscardOutBuffer();
+                    serialPort2.DiscardInBuffer();
+                    serialPort2.Write("OK"); //Write OK to Agromon to read network setting.
+                    richTextBox1.Text += "<TX>" + " " + timestamp + " " + "READ" + " " + "<CR><LF>" + Environment.NewLine;
+                    wait(2000);
+                    a = serialPort2.ReadLine();
+                    string[] DataReceivedStrings1 = a.Split(' ');
+                    if (DataReceivedStrings1[0] == "No")
+                    {
+                        richTextBox1.Text += "<RX>" + " " + timestamp + " " + "NO DATA AVAILABLE" + " " + "<CR><LF>" + Environment.NewLine;
+                    }
+                    else
+                    {
+                        string[] b = DataReceivedStrings1[0].Split('\r');
+                        richTextBox1.Text += "<RX>" + " " + timestamp + " " + b[0] + " " + "<CR><LF>" + Environment.NewLine;
+                        wait(2000);
+                        if(b[0] == "Wifi")
+                        {
+
+                        }
+                    }
                 }
                 catch (Exception err)
                 {
@@ -648,7 +800,7 @@ namespace test2
                     // Send 0xAA 0x55 \r\n to Agromon to enter Configuration mode automatically before the 10s timeout.
                     if (DataReceivedString == "OK")
                     {
-                        sensor_id = serialPort2.ReadExisting();
+                        sensor_id = serialPort2.ReadLine();
                         log.Text += "TX: " + sensor_id + Environment.NewLine;
                         if (sensor_id == "AGROMON READY\r\nOK\r\n")
                         {
@@ -781,6 +933,33 @@ namespace test2
             if(website == DialogResult.Yes)
             { 
                 System.Diagnostics.Process.Start("https://www.wondernica.com/agromon.html");
+            }
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            string a;
+            DateTime dateTime = DateTime.Now;
+            String timestamp = dateTime.ToString("hh:mm:ss");
+            if (serialPort2.IsOpen)
+            {
+                string message = "Are you sure to reset all the network settings?";
+                string title = "Confirm";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                //Button Result : IF Yes then start network configuration setup
+                DialogResult result = MessageBox.Show(message, title, buttons);
+                if (result == DialogResult.Yes)
+                {
+                    serialPort2.DiscardOutBuffer();
+                    serialPort2.DiscardInBuffer();
+                    serialPort2.Write("RESET"); //Write RESET to Agromon to reset network setting.
+                    richTextBox1.Text += "<TX>" + " " + timestamp + " " + "RESET ALL" + " " + "<CR><LF>" + Environment.NewLine;
+                    wait(2000);
+                    a = serialPort2.ReadLine();
+                    string[] DataReceivedStrings1 = a.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                    richTextBox1.Text += "<RX>" + " " + timestamp + " " + DataReceivedStrings1[0] + " <CR><LF>" + Environment.NewLine;
+                    wait(2000);
+                }
             }
         }
 

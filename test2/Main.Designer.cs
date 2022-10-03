@@ -74,9 +74,14 @@
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.button12 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.button13 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.label11 = new System.Windows.Forms.Label();
@@ -110,11 +115,7 @@
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -229,12 +230,13 @@
             this.tableLayoutPanel4.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.groupBox11.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.tabControl2.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.tabPage7.SuspendLayout();
             this.tabPage8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox15.SuspendLayout();
@@ -694,7 +696,7 @@
             this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip2.Location = new System.Drawing.Point(3, 24);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(458, 30);
+            this.menuStrip2.Size = new System.Drawing.Size(458, 24);
             this.menuStrip2.TabIndex = 3;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -759,15 +761,7 @@
             // 
             // groupBox11
             // 
-            this.groupBox11.Controls.Add(this.button12);
-            this.groupBox11.Controls.Add(this.button13);
-            this.groupBox11.Controls.Add(this.button20);
-            this.groupBox11.Controls.Add(this.tabControl2);
-            this.groupBox11.Controls.Add(this.pictureBox5);
-            this.groupBox11.Controls.Add(this.label10);
-            this.groupBox11.Controls.Add(this.label12);
-            this.groupBox11.Controls.Add(this.label16);
-            this.groupBox11.Controls.Add(this.label18);
+            this.groupBox11.Controls.Add(this.panel2);
             this.groupBox11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox11.Location = new System.Drawing.Point(547, 2);
             this.groupBox11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -778,19 +772,27 @@
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Network Information";
             // 
-            // button12
+            // panel2
             // 
-            this.button12.Location = new System.Drawing.Point(288, 732);
-            this.button12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(121, 59);
-            this.button12.TabIndex = 14;
-            this.button12.Text = "Reset";
-            this.button12.UseVisualStyleBackColor = true;
+            this.panel2.AutoScroll = true;
+            this.panel2.Controls.Add(this.button13);
+            this.panel2.Controls.Add(this.button20);
+            this.panel2.Controls.Add(this.button12);
+            this.panel2.Controls.Add(this.pictureBox5);
+            this.panel2.Controls.Add(this.label18);
+            this.panel2.Controls.Add(this.label16);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.tabControl2);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 23);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(426, 826);
+            this.panel2.TabIndex = 16;
             // 
             // button13
             // 
-            this.button13.Location = new System.Drawing.Point(161, 731);
+            this.button13.Location = new System.Drawing.Point(153, 709);
             this.button13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(121, 60);
@@ -801,7 +803,7 @@
             // 
             // button20
             // 
-            this.button20.Location = new System.Drawing.Point(34, 731);
+            this.button20.Location = new System.Drawing.Point(3, 709);
             this.button20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(121, 59);
@@ -810,16 +812,69 @@
             this.button20.UseVisualStyleBackColor = true;
             this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(302, 709);
+            this.button12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(121, 59);
+            this.button12.TabIndex = 14;
+            this.button12.Text = "Reset";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Location = new System.Drawing.Point(78, 61);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(211, 205);
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.Red;
+            this.label18.Location = new System.Drawing.Point(19, 356);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(105, 25);
+            this.label18.TabIndex = 6;
+            this.label18.Text = "INACTIVE";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(19, 309);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(127, 25);
+            this.label16.TabIndex = 4;
+            this.label16.Text = "Not Available";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(20, 334);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(146, 22);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "Network Status";
+            // 
             // tabControl2
             // 
             this.tabControl2.Controls.Add(this.tabPage5);
             this.tabControl2.Controls.Add(this.tabPage6);
             this.tabControl2.Controls.Add(this.tabPage7);
             this.tabControl2.Controls.Add(this.tabPage8);
-            this.tabControl2.Location = new System.Drawing.Point(7, 363);
+            this.tabControl2.Location = new System.Drawing.Point(3, 384);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(425, 363);
+            this.tabControl2.Size = new System.Drawing.Size(425, 275);
             this.tabControl2.TabIndex = 7;
             // 
             // tabPage5
@@ -829,7 +884,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 31);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(417, 328);
+            this.tabPage5.Size = new System.Drawing.Size(417, 240);
             this.tabPage5.TabIndex = 0;
             this.tabPage5.Text = "Wi-Fi";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -861,7 +916,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 31);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(417, 328);
+            this.tabPage6.Size = new System.Drawing.Size(417, 240);
             this.tabPage6.TabIndex = 1;
             this.tabPage6.Text = "Sigfox";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -888,6 +943,7 @@
             // 
             // tabPage7
             // 
+            this.tabPage7.AutoScroll = true;
             this.tabPage7.Controls.Add(this.label60);
             this.tabPage7.Controls.Add(this.label59);
             this.tabPage7.Controls.Add(this.label58);
@@ -913,7 +969,7 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 31);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(417, 328);
+            this.tabPage7.Size = new System.Drawing.Size(417, 240);
             this.tabPage7.TabIndex = 2;
             this.tabPage7.Text = "LoraWAN";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -1145,7 +1201,7 @@
             this.tabPage8.Location = new System.Drawing.Point(4, 31);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(417, 328);
+            this.tabPage8.Size = new System.Drawing.Size(417, 240);
             this.tabPage8.TabIndex = 3;
             this.tabPage8.Text = "4G/LTE";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -1170,57 +1226,15 @@
             this.label36.TabIndex = 17;
             this.label36.Text = "Not Available";
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(121, 31);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(211, 205);
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(23, 250);
+            this.label10.Location = new System.Drawing.Point(20, 287);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(100, 22);
             this.label10.TabIndex = 1;
             this.label10.Text = "Network 1";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(23, 297);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(146, 22);
-            this.label12.TabIndex = 3;
-            this.label12.Text = "Network Status";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(22, 272);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(127, 25);
-            this.label16.TabIndex = 4;
-            this.label16.Text = "Not Available";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.Red;
-            this.label18.Location = new System.Drawing.Point(22, 319);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(105, 25);
-            this.label18.TabIndex = 6;
-            this.label18.Text = "INACTIVE";
             // 
             // groupBox1
             // 
@@ -2465,7 +2479,9 @@
             this.tableLayoutPanel4.ResumeLayout(false);
             this.groupBox12.ResumeLayout(false);
             this.groupBox11.ResumeLayout(false);
-            this.groupBox11.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.tabControl2.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
@@ -2475,7 +2491,6 @@
             this.tabPage7.PerformLayout();
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -2706,5 +2721,6 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
