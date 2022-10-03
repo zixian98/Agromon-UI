@@ -81,3 +81,7 @@
 <a href="https://github.com/AgentHitmanFaris/Agromon-UI/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=AgentHitmanFaris/Agromon-UI" />
 </a>
+
+> This page only show the full version of apps thats works
+
+> For any further development please use Development branch to view the works
