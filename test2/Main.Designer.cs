@@ -215,6 +215,11 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comingsoon1 = new System.Windows.Forms.TextBox();
+            this.comingsoon2 = new System.Windows.Forms.TextBox();
+            this.comingsoon3 = new System.Windows.Forms.TextBox();
+            this.label66 = new System.Windows.Forms.Label();
+            this.label73 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -874,7 +879,7 @@
             this.tabControl2.Location = new System.Drawing.Point(3, 384);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(425, 275);
+            this.tabControl2.Size = new System.Drawing.Size(425, 263);
             this.tabControl2.TabIndex = 7;
             // 
             // tabPage5
@@ -884,7 +889,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 31);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(417, 240);
+            this.tabPage5.Size = new System.Drawing.Size(417, 228);
             this.tabPage5.TabIndex = 0;
             this.tabPage5.Text = "Wi-Fi";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -916,7 +921,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 31);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(417, 240);
+            this.tabPage6.Size = new System.Drawing.Size(417, 228);
             this.tabPage6.TabIndex = 1;
             this.tabPage6.Text = "Sigfox";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -927,9 +932,9 @@
             this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.Location = new System.Drawing.Point(6, 11);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(94, 22);
+            this.label37.Size = new System.Drawing.Size(236, 22);
             this.label37.TabIndex = 19;
-            this.label37.Text = "Sim Type";
+            this.label37.Text = "Radio Configuration (RC)";
             // 
             // label38
             // 
@@ -969,7 +974,7 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 31);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(417, 240);
+            this.tabPage7.Size = new System.Drawing.Size(417, 228);
             this.tabPage7.TabIndex = 2;
             this.tabPage7.Text = "LoraWAN";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -1201,7 +1206,7 @@
             this.tabPage8.Location = new System.Drawing.Point(4, 31);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(417, 240);
+            this.tabPage8.Size = new System.Drawing.Size(417, 228);
             this.tabPage8.TabIndex = 3;
             this.tabPage8.Text = "4G/LTE";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -1257,6 +1262,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.AutoScroll = true;
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel3.Controls.Add(this.label66);
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.groupBox15);
             this.panel3.Controls.Add(this.button3);
@@ -1332,6 +1338,7 @@
             // groupBox16
             // 
             this.groupBox16.AutoSize = true;
+            this.groupBox16.Controls.Add(this.label73);
             this.groupBox16.Controls.Add(this.checkBox11);
             this.groupBox16.Controls.Add(this.checkBox10);
             this.groupBox16.Controls.Add(this.checkBox9);
@@ -1609,8 +1616,8 @@
             // 
             // radioButton3
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(240, 40);
+            this.radioButton3.AutoCheck = false;
+            this.radioButton3.Location = new System.Drawing.Point(223, 40);
             this.radioButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(109, 26);
@@ -1690,6 +1697,7 @@
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.comingsoon1);
             this.groupBox7.Controls.Add(this.button14);
             this.groupBox7.Controls.Add(this.button11);
             this.groupBox7.Controls.Add(this.label27);
@@ -1932,6 +1940,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.comingsoon2);
             this.groupBox3.Controls.Add(this.button15);
             this.groupBox3.Controls.Add(this.button10);
             this.groupBox3.Controls.Add(this.label19);
@@ -2174,6 +2183,7 @@
             // 
             // groupBox9
             // 
+            this.groupBox9.Controls.Add(this.comingsoon3);
             this.groupBox9.Controls.Add(this.button16);
             this.groupBox9.Controls.Add(this.button9);
             this.groupBox9.Controls.Add(this.label22);
@@ -2420,7 +2430,7 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // exitToolStripMenuItem
@@ -2434,7 +2444,7 @@
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 26);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // aboutToolStripMenuItem
@@ -2443,6 +2453,52 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // comingsoon1
+            // 
+            this.comingsoon1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comingsoon1.Location = new System.Drawing.Point(97, 237);
+            this.comingsoon1.Name = "comingsoon1";
+            this.comingsoon1.Size = new System.Drawing.Size(255, 45);
+            this.comingsoon1.TabIndex = 12;
+            this.comingsoon1.Text = "COMING SOON";
+            // 
+            // comingsoon2
+            // 
+            this.comingsoon2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comingsoon2.Location = new System.Drawing.Point(97, 237);
+            this.comingsoon2.Name = "comingsoon2";
+            this.comingsoon2.Size = new System.Drawing.Size(255, 45);
+            this.comingsoon2.TabIndex = 17;
+            this.comingsoon2.Text = "COMING SOON";
+            // 
+            // comingsoon3
+            // 
+            this.comingsoon3.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comingsoon3.Location = new System.Drawing.Point(97, 237);
+            this.comingsoon3.Name = "comingsoon3";
+            this.comingsoon3.Size = new System.Drawing.Size(255, 45);
+            this.comingsoon3.TabIndex = 14;
+            this.comingsoon3.Text = "COMING SOON";
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Location = new System.Drawing.Point(216, 28);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(111, 22);
+            this.label66.TabIndex = 23;
+            this.label66.Text = "coming soon";
+            // 
+            // label73
+            // 
+            this.label73.AutoSize = true;
+            this.label73.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label73.Location = new System.Drawing.Point(92, 93);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(312, 46);
+            this.label73.TabIndex = 23;
+            this.label73.Text = "COMING SOON";
             // 
             // Main
             // 
@@ -2722,5 +2778,10 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox comingsoon1;
+        private System.Windows.Forms.TextBox comingsoon2;
+        private System.Windows.Forms.TextBox comingsoon3;
+        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.Label label73;
     }
 }

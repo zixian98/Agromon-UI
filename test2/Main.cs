@@ -41,6 +41,8 @@ namespace test2
             //Define timestamp for command log.
             if (serialPort2.IsOpen)
             {
+                serialPort2.DiscardOutBuffer();
+                serialPort2.DiscardInBuffer();
                 //******************************START OF WIFI SETTING******************************************
                 //IF Wi-Fi radiobutton is checked, 
                 int wifisetting_state;
@@ -343,7 +345,6 @@ namespace test2
                     {
                         serialPort2.DiscardOutBuffer();
                         serialPort2.DiscardInBuffer();
-                        int lte_setup_state = 0;
                         int lte_selection = comboBox3.SelectedIndex;
                         serialPort2.Write("LTSET "); //Write 4G to initialise 4G Setting
                         richTextBox1.Text += "<TX>" + " " + timestamp + " " + "LTSET" + " " + "<CR><LF>" + Environment.NewLine;
@@ -353,55 +354,54 @@ namespace test2
                         wait(1000);
                         if (DataReceivedStrings1[0] == "OK")
                         {
-                            lte_setup_state += 1;
-                            if (lte_setup_state == 1)
+                            switch (lte_selection)
                             {
-                                switch (lte_selection)
-                                {
-                                    case 0:
-                                        serialPort2.Write("SIM"); //Write SIM  to Agromon to initialise setup SIM frequency setup.
-                                        richTextBox1.Text += "<TX>" + " " + timestamp + " " + "SIM" + " " + "<CR><LF>" + Environment.NewLine;
-                                        b = serialPort2.ReadLine();
-                                        string[] DataReceivedStrings2 = b.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
-                                        wait(3000);
-                                        if (DataReceivedStrings2[0] == "OK")
-                                        {
-                                            richTextBox1.Text += "<RX>" + " " + timestamp + " " + DataReceivedStrings2[0] + " " + "<CR><LF>" + Environment.NewLine;
-                                            wait(300);
-                                            richTextBox1.Text += "<TX>" + " " + timestamp + " 4GSET DONE " + "<CR><LF>" + Environment.NewLine;
-                                        }
-                                        else
-                                        {
-                                            richTextBox1.Text += "<RX>" + " " + timestamp + " " + "ERROR" + " " + "<CR><LF>" + Environment.NewLine;
-                                        }
-                                        break;
+                                case 0:
+                                    serialPort2.Write("SIM"); //Write SIM  to Agromon to initialise setup SIM frequency setup.
+                                    wait(2000);
+                                    serialPort2.Write("SIM"); 
+                                    wait(2000);
+                                    richTextBox1.Text += "<TX>" + " " + timestamp + " " + "SIM" + " " + "<CR><LF>" + Environment.NewLine;
+                                    b = serialPort2.ReadLine();
+                                    string[] DataReceivedStrings2 = b.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                                    wait(3000);
+                                    if (DataReceivedStrings2[0] == "OK")
+                                    {
+                                        richTextBox1.Text += "<RX>" + " " + timestamp + " " + DataReceivedStrings2[0] + " " + "<CR><LF>" + Environment.NewLine;
+                                        wait(300);
+                                        richTextBox1.Text += "<TX>" + " " + timestamp + " 4GSET DONE " + "<CR><LF>" + Environment.NewLine;
+                                    }
+                                    else
+                                    {
+                                        richTextBox1.Text += "<RX>" + " " + timestamp + " " + "ERROR" + " " + "<CR><LF>" + Environment.NewLine;
+                                    }
+                                    break;
 
-                                    case 1:
-                                        serialPort2.Write("eSIM"); //Write eSIM  to Agromon to initialise setup eSIM frequency setup.
-                                        richTextBox1.Text += "<TX>" + " " + timestamp + " " + "eSIM" + " " + "<CR><LF>" + Environment.NewLine;
-                                        b = serialPort2.ReadLine();
-                                        string[] DataReceivedStrings3 = b.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
-                                        wait(3000);
-                                        if (DataReceivedStrings3[0] == "OK")
-                                        {
-                                            richTextBox1.Text += "<RX>" + " " + timestamp + " " + DataReceivedStrings3[0] + " " + "<CR><LF>" + Environment.NewLine;
-                                            wait(300);
-                                            richTextBox1.Text += "<TX>" + " " + timestamp + " 4GSET DONE " + "<CR><LF>" + Environment.NewLine;
-                                        }
-                                        else
-                                        {
-                                            richTextBox1.Text += "<RX>" + " " + timestamp + " " + "ERROR" + " " + "<CR><LF>" + Environment.NewLine;
-                                        }
-                                        break;
+                                case 1:
+                                    serialPort2.Write("eSIM"); //Write eSIM  to Agromon to initialise setup eSIM frequency setup.
+                                    richTextBox1.Text += "<TX>" + " " + timestamp + " " + "eSIM" + " " + "<CR><LF>" + Environment.NewLine;
+                                    b = serialPort2.ReadLine();
+                                    string[] DataReceivedStrings3 = b.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                                    wait(3000);
+                                    if (DataReceivedStrings3[0] == "OK")
+                                    {
+                                        richTextBox1.Text += "<RX>" + " " + timestamp + " " + DataReceivedStrings3[0] + " " + "<CR><LF>" + Environment.NewLine;
+                                        wait(300);
+                                        richTextBox1.Text += "<TX>" + " " + timestamp + " 4G SET DONE " + "<CR><LF>" + Environment.NewLine;
+                                    }
+                                    else
+                                    {
+                                        richTextBox1.Text += "<RX>" + " " + timestamp + " " + "ERROR" + " " + "<CR><LF>" + Environment.NewLine;
+                                    }
+                                    break;
 
-                                    default:
-                                        break;
-                                }
+                                default:
+                                    break;
                             }
                         }
                     }
                 }
-                //******************************END OF 4G SETTING**************************************
+                //******************************END OF 4G SETTING*****************************************//
             }
         }
 
@@ -466,11 +466,11 @@ namespace test2
         //LoraWAN Radiobutton : Selected Condition
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
-            groupBox13.Enabled = false; //Enable Groupbox 13
-            groupBox14.Enabled = false; //Enable Groupbox 14
-            groupBox16.Enabled = true; //Enable Groupbox 15
-            groupBox15.Enabled = false; //Enable Groupbox 16
-            tabControl2.SelectedIndex = 2; //Select LoraWAN Tab = 2
+            //groupBox13.Enabled = false; //Enable Groupbox 13
+            //groupBox14.Enabled = false; //Enable Groupbox 14
+            //groupBox16.Enabled = true; //Enable Groupbox 15
+            //groupBox15.Enabled = false; //Enable Groupbox 16
+            //tabControl2.SelectedIndex = 2; //Select LoraWAN Tab = 2
         }
 
         // 4G/LTE Radiobutton : Selected Condition
@@ -523,6 +523,14 @@ namespace test2
             baudrate.Enabled = true;
             databits.Enabled = true;
             stopbits.Enabled = true;
+            tabPage2.Enabled = false;
+            tabPage3.Enabled = false;
+            tabPage4.Enabled = false;
+            groupBox13.Enabled = false; //Enable Groupbox 13
+            groupBox14.Enabled = false; //Enable Groupbox 14
+            groupBox16.Enabled = false; //Enable Groupbox 15
+            groupBox15.Enabled = false; //Enable Groupbox 16
+            radioButton3.Enabled = false;
             parity.Enabled = true;
             //disable configure button if not connected
             disconnect_button.Enabled = false;
@@ -610,32 +618,61 @@ namespace test2
         //Read Button : To read the network configuration of Agromon
         private void button13_Click(object sender, EventArgs e)
         {
-            string a;
+            string a, c;
             DateTime dateTime = DateTime.Now;
             String timestamp = dateTime.ToString("hh:mm:ss");
             if (serialPort2.IsOpen)
             {
+                serialPort2.DiscardOutBuffer();
+                serialPort2.DiscardInBuffer();
                 try
                 {
-                    serialPort2.DiscardOutBuffer();
-                    serialPort2.DiscardInBuffer();
                     serialPort2.Write("OK"); //Write OK to Agromon to read network setting.
                     richTextBox1.Text += "<TX>" + " " + timestamp + " " + "READ" + " " + "<CR><LF>" + Environment.NewLine;
                     wait(2000);
                     a = serialPort2.ReadLine();
                     string[] DataReceivedStrings1 = a.Split(' ');
-                    if (DataReceivedStrings1[0] == "No")
+                    if (DataReceivedStrings1[0] == "NO")
                     {
                         richTextBox1.Text += "<RX>" + " " + timestamp + " " + "NO DATA AVAILABLE" + " " + "<CR><LF>" + Environment.NewLine;
                     }
                     else
                     {
+                        label16.Text = DataReceivedStrings1[0];
                         string[] b = DataReceivedStrings1[0].Split('\r');
                         richTextBox1.Text += "<RX>" + " " + timestamp + " " + b[0] + " " + "<CR><LF>" + Environment.NewLine;
                         wait(2000);
-                        if(b[0] == "Wifi")
+                        if(b[0] == "WIFI")
                         {
-
+                            serialPort2.Write("WIFI");
+                            c = serialPort2.ReadLine();
+                            wait(100);
+                            label17.Text = c;
+                            richTextBox1.Text += "<RX>" + " " + timestamp + " " + c + " " + "<CR><LF>" + Environment.NewLine;
+                        }
+                        if (b[0] == "SIGFOX")
+                        {
+                            serialPort2.Write("SIGFOX");
+                            wait(100);
+                            c = serialPort2.ReadLine();
+                            label38.Text = c;
+                            richTextBox1.Text += "<RX>" + " " + timestamp + " " + c + " " + "<CR><LF>" + Environment.NewLine;
+                        }
+                        if (b[0] == "LORAWAN")
+                        {
+                            serialPort2.Write("LORAWAN");
+                            wait(100);
+                            c = serialPort2.ReadLine();
+                            label17.Text = c;
+                            richTextBox1.Text += "<RX>" + " " + timestamp + " " + c + " " + "<CR><LF>" + Environment.NewLine;
+                        }
+                        if (b[0] == "4G")
+                        {
+                            serialPort2.Write("LTE4G");
+                            wait(100);
+                            c = serialPort2.ReadLine();
+                            label36.Text = c;
+                            richTextBox1.Text += "<RX>" + " " + timestamp + " " + c + " " + "<CR><LF>" + Environment.NewLine;
                         }
                     }
                 }
@@ -804,7 +841,7 @@ namespace test2
                         log.Text += "TX: " + sensor_id + Environment.NewLine;
                         if (sensor_id == "AGROMON READY\r\nOK\r\n")
                         {
-                            byte[] bytestosend = { 0xAA, 0x55 };
+                            byte[] bytestosend = { 0xAA, 0x55};
                             serialPort2.Write(bytestosend, 0, bytestosend.Length);
                             log.Text += "Information Send: OK" + Environment.NewLine;
                             log.Text += "RX: " + serialPort2 + "\r\n" + Environment.NewLine;
@@ -959,6 +996,9 @@ namespace test2
                     string[] DataReceivedStrings1 = a.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
                     richTextBox1.Text += "<RX>" + " " + timestamp + " " + DataReceivedStrings1[0] + " <CR><LF>" + Environment.NewLine;
                     wait(2000);
+                    label17.Text = "NOT AVAILABLE";
+                    label36.Text = "NOT AVAILABLE";
+                    label38.Text = "NOT AVAILABLE";
                 }
             }
         }
