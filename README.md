@@ -87,7 +87,9 @@
 
 ## Under Research
 - [ ] LoRaWan configuration
+
 ![image](https://user-images.githubusercontent.com/81744011/193539505-af7940d4-f788-4790-bee6-af0890a3cc63.png)
 
 - [ ] Sensor cofiguration
+
 ![image](https://user-images.githubusercontent.com/81744011/193539615-f3b04f05-87ec-4b26-b6d6-a5bde7a65b21.png)
