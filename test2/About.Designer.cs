@@ -86,9 +86,9 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Location = new System.Drawing.Point(259, 80);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 22);
+            this.label3.Size = new System.Drawing.Size(117, 22);
             this.label3.TabIndex = 3;
-            this.label3.Text = "V 2.0.30922";
+            this.label3.Text = "V 2.0.031022";
             // 
             // label2
             // 

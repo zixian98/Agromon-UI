@@ -117,9 +117,6 @@ D:\Documents\Intern Project\Latest\test2\bin\Debug\Agromon Config Tools V 2.0.30
 D:\Documents\Intern Project\Latest\test2\bin\Debug\Agromon Config Tools V 2.0.30922.pdb
 D:\Documents\Intern Project\Latest\test2\obj\Debug\Agromon Config Tools V 2.0.30922.exe
 D:\Documents\Intern Project\Latest\test2\obj\Debug\Agromon Config Tools V 2.0.30922.pdb
-D:\Documents\Intern Project\Agromon Config Tool\test2\bin\Debug\Agromon Config Tools V 2.0.30922.exe.config
-D:\Documents\Intern Project\Agromon Config Tool\test2\bin\Debug\Agromon Config Tools V 2.0.30922.exe
-D:\Documents\Intern Project\Agromon Config Tool\test2\bin\Debug\Agromon Config Tools V 2.0.30922.pdb
 D:\Documents\Intern Project\Agromon Config Tool\test2\bin\Debug\System.CodeDom.dll
 D:\Documents\Intern Project\Agromon Config Tool\test2\bin\Debug\System.Configuration.ConfigurationManager.dll
 D:\Documents\Intern Project\Agromon Config Tool\test2\bin\Debug\System.Security.AccessControl.dll
@@ -138,5 +135,8 @@ D:\Documents\Intern Project\Agromon Config Tool\test2\obj\Debug\test2.Properties
 D:\Documents\Intern Project\Agromon Config Tool\test2\obj\Debug\Agromon_UI_Hex.csproj.GenerateResource.cache
 D:\Documents\Intern Project\Agromon Config Tool\test2\obj\Debug\Agromon_UI_Hex.csproj.CoreCompileInputs.cache
 D:\Documents\Intern Project\Agromon Config Tool\test2\obj\Debug\Agromon_UI_Hex.csproj.CopyComplete
-D:\Documents\Intern Project\Agromon Config Tool\test2\obj\Debug\Agromon Config Tools V 2.0.30922.exe
-D:\Documents\Intern Project\Agromon Config Tool\test2\obj\Debug\Agromon Config Tools V 2.0.30922.pdb
+D:\Documents\Intern Project\Agromon Config Tool\test2\bin\Debug\Agromon Config Tools V 2.0.031022.exe.config
+D:\Documents\Intern Project\Agromon Config Tool\test2\bin\Debug\Agromon Config Tools V 2.0.031022.exe
+D:\Documents\Intern Project\Agromon Config Tool\test2\bin\Debug\Agromon Config Tools V 2.0.031022.pdb
+D:\Documents\Intern Project\Agromon Config Tool\test2\obj\Debug\Agromon Config Tools V 2.0.031022.exe
+D:\Documents\Intern Project\Agromon Config Tool\test2\obj\Debug\Agromon Config Tools V 2.0.031022.pdb
