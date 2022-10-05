@@ -812,6 +812,8 @@ namespace test2
         {
             try
             {
+                DateTime dateTime = DateTime.Now;
+                String timestamp = dateTime.ToString("hh:mm:ss");
                 serial_port2 = new SerialPort(com_port.Text, Convert.ToInt32(baudrate.Text), (Parity)Enum.Parse(typeof(Parity), parity.Text), Convert.ToInt32(databits.Text), (StopBits)Enum.Parse(typeof(StopBits), stopbits.Text));
                 serialPort2.PortName = com_port.Text;
                 serialPort2.BaudRate = Convert.ToInt32(baudrate.Text);
@@ -823,6 +825,7 @@ namespace test2
                 //check whether the port is connected then function executes
                 if (serialPort2.IsOpen)
                 {
+                    //string k;
                     com_status.Text = "CONNECTING";
                     com_status.ForeColor = Color.Red;
                     //disable combobox if it is connected
@@ -833,25 +836,23 @@ namespace test2
                     parity.Enabled = false;
                     refresh_button.Enabled = false;
                     disconnect_button.Enabled = true;
+                    //wait(5000);
                     // When software established connection with Agromon hardware
-                    // Send 0xAA 0x55 \r\n to Agromon to enter Configuration mode automatically before the 10s timeout.
-                    if (DataReceivedString == "OK")
-                    {
-                        sensor_id = serialPort2.ReadLine();
-                        log.Text += "TX: " + sensor_id + Environment.NewLine;
-                        if (sensor_id == "AGROMON READY\r\nOK\r\n")
-                        {
-                            byte[] bytestosend = { 0xAA, 0x55};
-                            serialPort2.Write(bytestosend, 0, bytestosend.Length);
-                            log.Text += "Information Send: OK" + Environment.NewLine;
-                            log.Text += "RX: " + serialPort2 + "\r\n" + Environment.NewLine;
-                        }
-                    }
-
-                    com_status.Text = "CONNECTED";
-                    com_status.ForeColor = Color.Green;
-                    connect_button.Enabled = false;
+                    // Send 0xAA 0x55 \r\n to Agromon to enter Configuration mode automatically before the 10s timeout.string a;
+                    //    serialPort2.Write("config");
+                    //    wait(2000);
+                    //    log.Text += "<TX>" + " " + timestamp + " " + "Conne\\" + " " + "<CR><LF>" + Environment.NewLine;
+                    //    wait(1000);
+                    //    k = serialPort2.ReadLine();
+                    //    string[] DataReceivedStrings1 = k.Split(' ');
                 }
+                com_status.Text = "CONNECTED";
+                com_status.ForeColor = Color.Green;
+                network_name.Text = "Nothing";
+                sensor.Text = "Nothing";
+                sensor2.Text = "Nothing";
+                sensor3.Text = "Nothing";
+                connect_button.Enabled = false;
             }
             catch (Exception)
             {
@@ -888,7 +889,7 @@ namespace test2
         {
 
             DateTime dateTime = DateTime.Now;
-            String timestamp = dateTime.ToString();
+            String timestamp = dateTime.ToString("hh:mm:ss");
             if (!serialPort2.IsOpen)
             {
 
@@ -921,7 +922,7 @@ namespace test2
             if (serialPort2.IsOpen)
             {
                 DateTime dateTime = DateTime.Now;
-                String timestamp = dateTime.ToString();
+                String timestamp = dateTime.ToString("hh:mm:ss");
                 serialPort2.DiscardOutBuffer();
                 serialPort2.DiscardInBuffer();
                 serialPort2.Close();
