@@ -1,6 +1,7 @@
 # Argomon 2022 Configuration Tools
 <p align="center">
-    <img src="https://www.wondernica.com/assets/img/Agromon.png" alt="alternatetext"> </img>
+    <img src="https://user-images.githubusercontent.com/81744011/194492527-2179047a-8769-470c-8ca5-dbb3a866e874.gif"> 
+
 </p>
 
 <p>
