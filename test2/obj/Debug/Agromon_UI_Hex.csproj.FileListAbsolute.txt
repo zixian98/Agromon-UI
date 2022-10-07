@@ -140,3 +140,9 @@ D:\Documents\Intern Project\Agromon Config Tool\test2\bin\Debug\Agromon Config T
 D:\Documents\Intern Project\Agromon Config Tool\test2\bin\Debug\Agromon Config Tools V 2.0.031022.pdb
 D:\Documents\Intern Project\Agromon Config Tool\test2\obj\Debug\Agromon Config Tools V 2.0.031022.exe
 D:\Documents\Intern Project\Agromon Config Tool\test2\obj\Debug\Agromon Config Tools V 2.0.031022.pdb
+D:\Documents\Intern Project\Agromon Config Tool\test2\bin\Debug\Interop.WMPLib.dll
+D:\Documents\Intern Project\Agromon Config Tool\test2\bin\Debug\AxInterop.WMPLib.dll
+D:\Documents\Intern Project\Agromon Config Tool\test2\obj\Debug\Interop.WMPLib.dll
+D:\Documents\Intern Project\Agromon Config Tool\test2\obj\Debug\AxInterop.WMPLib.dll
+D:\Documents\Intern Project\Agromon Config Tool\test2\obj\Debug\Agromon_UI_Hex.csproj.ResolveComReference.cache
+D:\Documents\Intern Project\Agromon Config Tool\test2\obj\Debug\test2.splash.resources

@@ -35,7 +35,7 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.main_page = new System.Windows.Forms.TabPage();
             this.log = new System.Windows.Forms.RichTextBox();
             this.sensor1 = new System.Windows.Forms.GroupBox();
             this.label69 = new System.Windows.Forms.Label();
@@ -69,7 +69,7 @@
             this.connect_button = new System.Windows.Forms.Button();
             this.com_port = new System.Windows.Forms.ComboBox();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.network_cofig_page = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -152,7 +152,7 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.sensor1_cofig_page = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
@@ -172,7 +172,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.sensor2_cofig_page = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
@@ -192,7 +192,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.sensor3_cofig_page = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.richTextBox4 = new System.Windows.Forms.RichTextBox();
@@ -223,7 +223,7 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.tabPage9.SuspendLayout();
+            this.main_page.SuspendLayout();
             this.sensor1.SuspendLayout();
             this.groupBox28.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
@@ -231,7 +231,7 @@
             this.groupBox31.SuspendLayout();
             this.groupBox18.SuspendLayout();
             this.groupBox17.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.network_cofig_page.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.groupBox11.SuspendLayout();
@@ -248,19 +248,19 @@
             this.groupBox16.SuspendLayout();
             this.groupBox13.SuspendLayout();
             this.groupBox14.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.sensor1_cofig_page.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
+            this.sensor2_cofig_page.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox5.SuspendLayout();
-            this.tabPage4.SuspendLayout();
+            this.sensor3_cofig_page.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox9.SuspendLayout();
@@ -318,11 +318,11 @@
             this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Controls.Add(this.tabPage9);
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.main_page);
+            this.tabControl1.Controls.Add(this.network_cofig_page);
+            this.tabControl1.Controls.Add(this.sensor1_cofig_page);
+            this.tabControl1.Controls.Add(this.sensor2_cofig_page);
+            this.tabControl1.Controls.Add(this.sensor3_cofig_page);
             this.tabControl1.Cursor = System.Windows.Forms.Cursors.Default;
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(3, 2);
@@ -333,20 +333,20 @@
             this.tabControl1.TabIndex = 0;
             this.tabControl1.TabStop = false;
             // 
-            // tabPage9
+            // main_page
             // 
-            this.tabPage9.Controls.Add(this.log);
-            this.tabPage9.Controls.Add(this.sensor1);
-            this.tabPage9.Controls.Add(this.groupBox28);
-            this.tabPage9.Controls.Add(this.groupBox18);
-            this.tabPage9.Controls.Add(this.groupBox17);
-            this.tabPage9.Location = new System.Drawing.Point(4, 31);
-            this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(1491, 859);
-            this.tabPage9.TabIndex = 4;
-            this.tabPage9.Text = "Main";
-            this.tabPage9.UseVisualStyleBackColor = true;
+            this.main_page.Controls.Add(this.log);
+            this.main_page.Controls.Add(this.sensor1);
+            this.main_page.Controls.Add(this.groupBox28);
+            this.main_page.Controls.Add(this.groupBox18);
+            this.main_page.Controls.Add(this.groupBox17);
+            this.main_page.Location = new System.Drawing.Point(4, 31);
+            this.main_page.Name = "main_page";
+            this.main_page.Padding = new System.Windows.Forms.Padding(3);
+            this.main_page.Size = new System.Drawing.Size(1491, 859);
+            this.main_page.TabIndex = 4;
+            this.main_page.Text = "Main";
+            this.main_page.UseVisualStyleBackColor = true;
             // 
             // log
             // 
@@ -705,21 +705,21 @@
             this.menuStrip2.TabIndex = 3;
             this.menuStrip2.Text = "menuStrip2";
             // 
-            // tabPage1
+            // network_cofig_page
             // 
-            this.tabPage1.AllowDrop = true;
-            this.tabPage1.AutoScroll = true;
-            this.tabPage1.AutoScrollMinSize = new System.Drawing.Size(1, 0);
-            this.tabPage1.ContextMenuStrip = this.contextMenuStrip1;
-            this.tabPage1.Controls.Add(this.tableLayoutPanel4);
-            this.tabPage1.Location = new System.Drawing.Point(4, 31);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(1491, 859);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Network Configuration";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.network_cofig_page.AllowDrop = true;
+            this.network_cofig_page.AutoScroll = true;
+            this.network_cofig_page.AutoScrollMinSize = new System.Drawing.Size(1, 0);
+            this.network_cofig_page.ContextMenuStrip = this.contextMenuStrip1;
+            this.network_cofig_page.Controls.Add(this.tableLayoutPanel4);
+            this.network_cofig_page.Location = new System.Drawing.Point(4, 31);
+            this.network_cofig_page.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.network_cofig_page.Name = "network_cofig_page";
+            this.network_cofig_page.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.network_cofig_page.Size = new System.Drawing.Size(1491, 859);
+            this.network_cofig_page.TabIndex = 0;
+            this.network_cofig_page.Text = "Network Configuration";
+            this.network_cofig_page.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel4
             // 
@@ -1278,12 +1278,11 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(532, 826);
             this.panel3.TabIndex = 9;
-            this.panel3.DockChanged += new System.EventHandler(this.panel3_DockChanged);
             // 
             // label66
             // 
             this.label66.AutoSize = true;
-            this.label66.Location = new System.Drawing.Point(220, 34);
+            this.label66.Location = new System.Drawing.Point(221, 31);
             this.label66.Name = "label66";
             this.label66.Size = new System.Drawing.Size(111, 22);
             this.label66.TabIndex = 23;
@@ -1573,7 +1572,7 @@
             this.groupBox14.AutoSize = true;
             this.groupBox14.Controls.Add(this.comboBox2);
             this.groupBox14.Controls.Add(this.label4);
-            this.groupBox14.Location = new System.Drawing.Point(3, 227);
+            this.groupBox14.Location = new System.Drawing.Point(3, 237);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Size = new System.Drawing.Size(529, 114);
             this.groupBox14.TabIndex = 20;
@@ -1659,17 +1658,17 @@
             this.radioButton4.UseVisualStyleBackColor = true;
             this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
-            // tabPage2
+            // sensor1_cofig_page
             // 
-            this.tabPage2.Controls.Add(this.tableLayoutPanel5);
-            this.tabPage2.Location = new System.Drawing.Point(4, 31);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(1491, 859);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Sensor Configuration 1";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.sensor1_cofig_page.Controls.Add(this.tableLayoutPanel5);
+            this.sensor1_cofig_page.Location = new System.Drawing.Point(4, 31);
+            this.sensor1_cofig_page.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.sensor1_cofig_page.Name = "sensor1_cofig_page";
+            this.sensor1_cofig_page.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.sensor1_cofig_page.Size = new System.Drawing.Size(1491, 859);
+            this.sensor1_cofig_page.TabIndex = 1;
+            this.sensor1_cofig_page.Text = "Sensor Configuration 1";
+            this.sensor1_cofig_page.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel5
             // 
@@ -1744,6 +1743,7 @@
             this.comingsoon1.Size = new System.Drawing.Size(255, 45);
             this.comingsoon1.TabIndex = 12;
             this.comingsoon1.Text = "COMING SOON";
+            this.comingsoon1.Visible = false;
             // 
             // button14
             // 
@@ -1912,17 +1912,17 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Sensor Model";
             // 
-            // tabPage3
+            // sensor2_cofig_page
             // 
-            this.tabPage3.Controls.Add(this.tableLayoutPanel6);
-            this.tabPage3.Location = new System.Drawing.Point(4, 31);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage3.Size = new System.Drawing.Size(1491, 859);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Sensor Configuration 2";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.sensor2_cofig_page.Controls.Add(this.tableLayoutPanel6);
+            this.sensor2_cofig_page.Location = new System.Drawing.Point(4, 31);
+            this.sensor2_cofig_page.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.sensor2_cofig_page.Name = "sensor2_cofig_page";
+            this.sensor2_cofig_page.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.sensor2_cofig_page.Size = new System.Drawing.Size(1491, 859);
+            this.sensor2_cofig_page.TabIndex = 2;
+            this.sensor2_cofig_page.Text = "Sensor Configuration 2";
+            this.sensor2_cofig_page.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel6
             // 
@@ -2164,17 +2164,17 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Sensor Model";
             // 
-            // tabPage4
+            // sensor3_cofig_page
             // 
-            this.tabPage4.Controls.Add(this.tableLayoutPanel7);
-            this.tabPage4.Location = new System.Drawing.Point(4, 31);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage4.Size = new System.Drawing.Size(1491, 859);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Sensor Configuration 3";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.sensor3_cofig_page.Controls.Add(this.tableLayoutPanel7);
+            this.sensor3_cofig_page.Location = new System.Drawing.Point(4, 31);
+            this.sensor3_cofig_page.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.sensor3_cofig_page.Name = "sensor3_cofig_page";
+            this.sensor3_cofig_page.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.sensor3_cofig_page.Size = new System.Drawing.Size(1491, 859);
+            this.sensor3_cofig_page.TabIndex = 3;
+            this.sensor3_cofig_page.Text = "Sensor Configuration 3";
+            this.sensor3_cofig_page.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel7
             // 
@@ -2450,10 +2450,10 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 30);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 28);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1531, 93);
+            this.pictureBox1.Size = new System.Drawing.Size(1531, 95);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -2467,7 +2467,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1531, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1531, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -2476,7 +2476,7 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // exitToolStripMenuItem
@@ -2490,7 +2490,7 @@
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 26);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // aboutToolStripMenuItem
@@ -2518,7 +2518,7 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage9.ResumeLayout(false);
+            this.main_page.ResumeLayout(false);
             this.sensor1.ResumeLayout(false);
             this.sensor1.PerformLayout();
             this.groupBox28.ResumeLayout(false);
@@ -2531,7 +2531,7 @@
             this.groupBox18.PerformLayout();
             this.groupBox17.ResumeLayout(false);
             this.groupBox17.PerformLayout();
-            this.tabPage1.ResumeLayout(false);
+            this.network_cofig_page.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.groupBox12.ResumeLayout(false);
             this.groupBox11.ResumeLayout(false);
@@ -2558,7 +2558,7 @@
             this.groupBox13.PerformLayout();
             this.groupBox14.ResumeLayout(false);
             this.groupBox14.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
+            this.sensor1_cofig_page.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
@@ -2566,7 +2566,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
+            this.sensor2_cofig_page.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -2574,7 +2574,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
+            this.sensor3_cofig_page.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
             this.groupBox9.ResumeLayout(false);
@@ -2598,7 +2598,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage9;
+        private System.Windows.Forms.TabPage main_page;
         private System.Windows.Forms.RichTextBox log;
         private System.Windows.Forms.GroupBox sensor1;
         private System.Windows.Forms.Label label69;
@@ -2632,7 +2632,7 @@
         private System.Windows.Forms.Button connect_button;
         private System.Windows.Forms.ComboBox com_port;
         private System.Windows.Forms.MenuStrip menuStrip2;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage network_cofig_page;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.GroupBox groupBox12;
         private System.Windows.Forms.RichTextBox richTextBox1;
@@ -2712,7 +2712,7 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage sensor1_cofig_page;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.RichTextBox richTextBox2;
@@ -2731,7 +2731,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage sensor2_cofig_page;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.RichTextBox richTextBox3;
@@ -2750,7 +2750,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage sensor3_cofig_page;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.RichTextBox richTextBox4;

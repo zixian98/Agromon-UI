@@ -6,8 +6,12 @@ using System.Management;
 using System.Text;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 using Application = System.Windows.Forms.Application;
+using WMPLib;
+using System.Windows;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace test2
 {
@@ -466,11 +470,11 @@ namespace test2
         //LoraWAN Radiobutton : Selected Condition
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
-            //groupBox13.Enabled = false; //Enable Groupbox 13
-            //groupBox14.Enabled = false; //Enable Groupbox 14
-            //groupBox16.Enabled = true; //Enable Groupbox 15
-            //groupBox15.Enabled = false; //Enable Groupbox 16
-            //tabControl2.SelectedIndex = 2; //Select LoraWAN Tab = 2
+            groupBox13.Enabled = false; //Enable Groupbox 13
+            groupBox14.Enabled = false; //Enable Groupbox 14
+            groupBox16.Enabled = true; //Enable Groupbox 15
+            groupBox15.Enabled = false; //Enable Groupbox 16
+            tabControl2.SelectedIndex = 2; //Select LoraWAN Tab = 2
         }
 
         // 4G/LTE Radiobutton : Selected Condition
@@ -523,18 +527,19 @@ namespace test2
             baudrate.Enabled = true;
             databits.Enabled = true;
             stopbits.Enabled = true;
-            tabPage2.Enabled = false;
-            tabPage3.Enabled = false;
-            tabPage4.Enabled = false;
+            sensor1_cofig_page.Enabled = true;
+            sensor2_cofig_page.Enabled = false;
+            sensor3_cofig_page.Enabled = false;
             groupBox13.Enabled = false; //Enable Groupbox 13
             groupBox14.Enabled = false; //Enable Groupbox 14
             groupBox16.Enabled = false; //Enable Groupbox 15
             groupBox15.Enabled = false; //Enable Groupbox 16
-            radioButton3.Enabled = false;
             parity.Enabled = true;
+            radioButton3.Enabled = false;
             //disable configure button if not connected
             disconnect_button.Enabled = false;
             LoadConfigurationSettings();
+            this.textBox1.AutoSize = true;
 
             SerialEncoding(); //Serial Encoding Function
             if (serialPort2.IsOpen)
@@ -699,7 +704,6 @@ namespace test2
             {
                 timer1.Enabled = false;
                 timer1.Stop();
-                // Console.WriteLine("stop wait timer");
             };
 
             while (timer1.Enabled)
@@ -820,9 +824,8 @@ namespace test2
                 serialPort2.DataBits = Convert.ToInt32(databits.Text);
                 serialPort2.StopBits = (StopBits)Enum.Parse(typeof(StopBits), stopbits.Text);
                 serialPort2.Parity = (Parity)Enum.Parse(typeof(Parity), parity.Text);
-                //serialPort2.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);
                 serialPort2.Open();
-                //check whether the port is connected then function executes
+
                 if (serialPort2.IsOpen)
                 {
                     //string k;
@@ -848,10 +851,10 @@ namespace test2
                 }
                 com_status.Text = "CONNECTED";
                 com_status.ForeColor = Color.Green;
-                network_name.Text = "Nothing";
-                sensor.Text = "Nothing";
-                sensor2.Text = "Nothing";
-                sensor3.Text = "Nothing";
+                network_name.Text = "NOT AVAILABLE";
+                sensor.Text = "NOT AVAILABLE";
+                sensor2.Text = "NOT AVAILABLE";
+                sensor3.Text = "NOT AVAILABLE";
                 connect_button.Enabled = false;
             }
             catch (Exception)
@@ -955,14 +958,8 @@ namespace test2
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
             About form3 = new About();
             form3.ShowDialog();
-        }
-
-        private void panel3_DockChanged(object sender, EventArgs e)
-        {
-            GroupBox groupBox1 = new GroupBox();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
