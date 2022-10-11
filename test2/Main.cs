@@ -527,9 +527,10 @@ namespace test2
             baudrate.Enabled = true;
             databits.Enabled = true;
             stopbits.Enabled = true;
-            sensor1_cofig_page.Enabled = true;
+            sensor1_cofig_page.Enabled = false;
             sensor2_cofig_page.Enabled = false;
             sensor3_cofig_page.Enabled = false;
+            network_cofig_page.Enabled = false;
             groupBox13.Enabled = false; //Enable Groupbox 13
             groupBox14.Enabled = false; //Enable Groupbox 14
             groupBox16.Enabled = false; //Enable Groupbox 15
@@ -773,6 +774,7 @@ namespace test2
             {
                 serialPort2.DiscardOutBuffer();
                 serialPort2.DiscardInBuffer();
+                Application.Exit();
             }
         }
 
@@ -828,7 +830,7 @@ namespace test2
 
                 if (serialPort2.IsOpen)
                 {
-                    //string k;
+                    string k;
                     com_status.Text = "CONNECTING";
                     com_status.ForeColor = Color.Red;
                     //disable combobox if it is connected
@@ -839,15 +841,31 @@ namespace test2
                     parity.Enabled = false;
                     refresh_button.Enabled = false;
                     disconnect_button.Enabled = true;
-                    //wait(5000);
-                    // When software established connection with Agromon hardware
-                    // Send 0xAA 0x55 \r\n to Agromon to enter Configuration mode automatically before the 10s timeout.string a;
-                    //    serialPort2.Write("config");
-                    //    wait(2000);
-                    //    log.Text += "<TX>" + " " + timestamp + " " + "Conne\\" + " " + "<CR><LF>" + Environment.NewLine;
-                    //    wait(1000);
-                    //    k = serialPort2.ReadLine();
-                    //    string[] DataReceivedStrings1 = k.Split(' ');
+                    //When software established connection with Agromon hardware
+                    //Send 0xAA 0x55 \r\n to Agromon to enter Configuration mode automatically before the 10s timeout.string a;
+                    serialPort2.Write("config");
+                    log.Text += "<TX>" + " " + timestamp + " " + "config" + " " + "<CR><LF>" + Environment.NewLine;
+                    wait(5000);
+                    k = serialPort2.ReadLine();
+                    string[] DataReceivedStrings1 = k.Split(',');
+                    log.Text += "<TX>" + " " + timestamp + " " + DataReceivedStrings1[0] + " " + "<CR><LF>" + Environment.NewLine;
+                    network_name.Text = DataReceivedStrings1[0];
+                    if (DataReceivedStrings1[1] == "0")
+                    {
+                        log.Text += "<TX>" + " " + timestamp + " " + "NOT CONNECTED" + " " + "<CR><LF>" + Environment.NewLine;
+                        network_status.Text = "NOT CONNECTED";
+                    }
+                    else
+                    {
+                        log.Text += "<TX>" + " " + timestamp + " " + "CONNECTED" + " " + "<CR><LF>" + Environment.NewLine;
+                        network_status.Text = "CONNECTED";
+                    }
+                    sensor.Text = DataReceivedStrings1[2];
+                    log.Text += "<TX>" + " " + timestamp + " " + DataReceivedStrings1[2] + " " + "<CR><LF>" + Environment.NewLine;
+                    sensor2.Text = DataReceivedStrings1[3];
+                    log.Text += "<TX>" + " " + timestamp + " " + DataReceivedStrings1[3] + " " + "<CR><LF>" + Environment.NewLine;
+                    sensor3.Text = DataReceivedStrings1[4];
+                    log.Text += "<TX>" + " " + timestamp + " " + DataReceivedStrings1[4] + " " + "<CR><LF>" + Environment.NewLine;
                 }
                 com_status.Text = "CONNECTED";
                 com_status.ForeColor = Color.Green;
@@ -856,6 +874,7 @@ namespace test2
                 sensor2.Text = "NOT AVAILABLE";
                 sensor3.Text = "NOT AVAILABLE";
                 connect_button.Enabled = false;
+                network_cofig_page.Enabled = true;
             }
             catch (Exception)
             {
