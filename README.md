@@ -20,6 +20,12 @@
 <p>
  <ul>
         <li>
+            V 1.0.4
+            <ol>
+                <li>Fix HEX number reading</li>
+            </ol>
+        </li>
+        <li>
             V 1.3.0 
             <ol>
                 <li>Network configuration page user interface update</li>
